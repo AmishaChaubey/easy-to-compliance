@@ -33,8 +33,8 @@ const TaxWebsite = () => {
     <section className="py-12 sm:py-16 md:py-20 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="max-w-7xl mx-auto text-center">
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-serif">
-        Welcome to EasyToCompliance
+      <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-serif">
+        Welcome to Easy To Compliance
       </h2>
 
       <p className="text-lg sm:text-xl text-gray-700 mb-4 sm:mb-6">
@@ -72,7 +72,7 @@ const TaxWebsite = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">
+            <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">
               Our Specialized Services
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
@@ -160,7 +160,7 @@ const TaxWebsite = () => {
       <section id="services" className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">Our Services</h2>
+            <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">Our Services</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Comprehensive tax solutions designed to meet your unique financial needs
             </p>
@@ -191,8 +191,8 @@ const TaxWebsite = () => {
       <section id="about" className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-serif">
-              About EasyToCompliance
+            <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-black mb-4 sm:mb-6 font-serif">
+              About Easy To Compliance
             </h2>
             <div className="w-20 sm:w-24 h-1 mx-auto mb-6 sm:mb-8" style={{ backgroundColor: '#135192' }}></div>
           </div>
@@ -263,7 +263,7 @@ const TaxWebsite = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">Why Choose Us</h2>
+            <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">Why Choose Us</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Discover what sets TaxExperts apart from the competition
             </p>
@@ -368,7 +368,7 @@ const TaxWebsite = () => {
       <section id="blog" className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">Latest Tax Insights</h2>
+            <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-black mb-3 sm:mb-4 font-serif">Latest Tax Insights</h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Stay informed with our latest articles on tax strategies and financial planning
             </p>
