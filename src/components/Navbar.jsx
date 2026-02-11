@@ -24,7 +24,7 @@ const Navbar = () => {
       ]
     },
     { 
-      to: "/service", 
+      to: "/services", 
       label: "Services",
       dropdown: [
         { to: "/service/accounting", label: "Accounting Services" },
