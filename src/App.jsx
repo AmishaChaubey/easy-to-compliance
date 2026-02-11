@@ -1,19 +1,29 @@
 import React from "react";
 import "./App.css";
-import TaxWebsite from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+
+import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+
+import Home from "./pages/Home";
+import Design from "./pages/services/Design";
+import Services from "./pages/services/Services";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
       <Navbar />
-      <TaxWebsite />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/design" element={<Design />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
 
       <Footer />
-    </div>
+    </>
   );
 };
 
