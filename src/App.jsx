@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -13,6 +13,7 @@ import Services from "./pages/services/Services";
 const App = () => {
   return (
     <>
+    <Router>
       <Header />
       <Navbar />
 
@@ -23,6 +24,7 @@ const App = () => {
       </Routes>
 
       <Footer />
+      </Router>
     </>
   );
 };
