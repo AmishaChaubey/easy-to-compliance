@@ -11,7 +11,7 @@ export const servicesData = {
     hero: {
       title: "Professional Accounting Services",
       subtitle: "Accurate, timely, and compliant accounting solutions for your business growth",
-      image: "/images/services/accounting-hero.jpg",
+      image: "https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg",
       cta: "Get Started Today"
     },
     about: {
@@ -25,23 +25,19 @@ export const servicesData = {
       ]
     },
     detailedFeatures: [
+      
       {
-        icon: "📊",
-        title: "Bookkeeping",
-        description: "Systematic recording of daily financial transactions with accuracy and efficiency"
-      },
-      {
-        icon: "📝",
+        icon: "",
         title: "GST Filing",
         description: "Timely GST returns filing with complete compliance and documentation"
       },
       {
-        icon: "📈",
+        icon: "",
         title: "Financial Reports",
         description: "Monthly, quarterly, and annual financial statements for business insights"
       },
       {
-        icon: "💰",
+        icon: "",
         title: "Payroll Support",
         description: "Complete payroll processing with tax calculations and compliance"
       }
@@ -108,7 +104,7 @@ export const servicesData = {
     hero: {
       title: "Comprehensive Audit Services",
       subtitle: "Independent, thorough, and professional audit services you can trust",
-      image: "/images/services/audit-hero.jpg",
+      image: "https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg",
       cta: "Request Audit Quote"
     },
     about: {
@@ -123,17 +119,17 @@ export const servicesData = {
     },
     detailedFeatures: [
       {
-        icon: "🔍",
+        icon: "",
         title: "Internal Audit",
         description: "Evaluate internal controls, risk management, and operational efficiency"
       },
       {
-        icon: "📋",
+        icon: "",
         title: "Tax Audit",
         description: "Comprehensive tax audit under Income Tax Act with complete documentation"
       },
       {
-        icon: "✅",
+        icon: "",
         title: "Statutory Audit",
         description: "Mandatory audit for compliance with Companies Act and regulations"
       }
@@ -200,7 +196,7 @@ export const servicesData = {
     hero: {
       title: "Strategic Business Consulting",
       subtitle: "Expert guidance to optimize your business finances and accelerate growth",
-      image: "/images/services/consulting-hero.jpg",
+      image: "https://images.pexels.com/photos/6863244/pexels-photo-6863244.jpeg",
       cta: "Book Consultation"
     },
     about: {
@@ -215,17 +211,17 @@ export const servicesData = {
     },
     detailedFeatures: [
       {
-        icon: "💼",
+        icon: "",
         title: "Business Planning",
         description: "Comprehensive business plans, financial projections, and growth strategies"
       },
       {
-        icon: "📊",
+        icon: "",
         title: "Tax Planning",
         description: "Strategic tax planning to minimize liability and maximize savings"
       },
       {
-        icon: "🚀",
+        icon: "",
         title: "Startup Advisory",
         description: "End-to-end support for startups from incorporation to funding"
       }
@@ -292,7 +288,7 @@ export const servicesData = {
     hero: {
       title: "Hassle-Free Payroll Management",
       subtitle: "Accurate, timely, and compliant payroll processing for your peace of mind",
-      image: "/images/services/payroll-hero.jpg",
+      image: "https://images.pexels.com/photos/8970290/pexels-photo-8970290.jpeg",
       cta: "Start Payroll Service"
     },
     about: {
@@ -307,17 +303,17 @@ export const servicesData = {
     },
     detailedFeatures: [
       {
-        icon: "💵",
+        icon: "",
         title: "Salary Processing",
         description: "Automated calculation of salaries, deductions, and reimbursements"
       },
       {
-        icon: "📄",
+        icon: "",
         title: "Payslip Generation",
         description: "Digital payslips with detailed breakup sent directly to employees"
       },
       {
-        icon: "⚖️",
+        icon: "",
         title: "Compliance Filing",
         description: "PF, ESI, PT, and TDS filing with complete statutory compliance"
       }
