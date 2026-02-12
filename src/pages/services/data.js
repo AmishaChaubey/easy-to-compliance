@@ -1,369 +1,375 @@
-// data.js - Service data for Easy to Compliance
-
 export const servicesData = {
   accounting: {
-    id: 'accounting',
-    title: 'Accounting Services',
-    slug: 'accounting-services',
-    heroImage: 'https://images.unsplash.com/photo-1554224311-beee2f770c1f?w=1920&h=600&fit=crop',
-    tagline: 'Comprehensive Financial Record Management',
-    description: 'Expert accounting solutions tailored to your business needs, ensuring accuracy and compliance.',
-    
+    title: "Accounting Services",
+    description: "Complete accounting solutions for businesses.",
+    features: [
+      "Bookkeeping",
+      "GST Filing",
+      "Financial Reports",
+      "Payroll Support"
+    ],
+    hero: {
+      title: "Professional Accounting Services",
+      subtitle: "Accurate, timely, and compliant accounting solutions for your business growth",
+      image: "/images/services/accounting-hero.jpg",
+      cta: "Get Started Today"
+    },
     about: {
-      heading: 'Professional Accounting Excellence',
-      content: 'Our accounting services help maintain your business\'s financial health. We handle accurate bookkeeping, financial statements, and all compliance-related work so you can focus on your business growth.',
+      title: "Why Choose Our Accounting Services?",
+      description: "We provide comprehensive accounting services that help businesses maintain accurate financial records, ensure compliance, and make informed decisions. Our experienced team handles everything from day-to-day bookkeeping to complex financial reporting.",
       highlights: [
-        'Daily bookkeeping and ledger maintenance',
-        'Monthly financial statements preparation',
-        'Bank reconciliation and cash flow management',
-        'GST and TDS compliance'
+        "Certified and experienced accountants",
+        "Cloud-based accounting systems",
+        "Real-time financial insights",
+        "100% compliance guaranteed"
       ]
     },
-
-    features: [
+    detailedFeatures: [
       {
-        icon: '📊',
-        title: 'Accurate Bookkeeping',
-        description: 'Systematic recording of all financial transactions with precision and timeliness'
+        icon: "📊",
+        title: "Bookkeeping",
+        description: "Systematic recording of daily financial transactions with accuracy and efficiency"
       },
       {
-        icon: '💰',
-        title: 'Financial Reporting',
-        description: 'Comprehensive monthly and annual financial statements for better decision making'
+        icon: "📝",
+        title: "GST Filing",
+        description: "Timely GST returns filing with complete compliance and documentation"
       },
       {
-        icon: '🔍',
-        title: 'Compliance Management',
-        description: 'Complete GST, TDS, and tax compliance to avoid penalties and legal issues'
+        icon: "📈",
+        title: "Financial Reports",
+        description: "Monthly, quarterly, and annual financial statements for business insights"
       },
       {
-        icon: '📈',
-        title: 'Cash Flow Analysis',
-        description: 'Detailed analysis of cash inflows and outflows for improved liquidity management'
+        icon: "💰",
+        title: "Payroll Support",
+        description: "Complete payroll processing with tax calculations and compliance"
       }
     ],
-
-    process: [
-      {
-        step: 1,
-        title: 'Initial Consultation',
-        description: 'We understand your business and analyze your accounting requirements'
-      },
-      {
-        step: 2,
-        title: 'System Setup',
-        description: 'Setup customized accounting system and processes for your business'
-      },
-      {
-        step: 3,
-        title: 'Regular Bookkeeping',
-        description: 'Record daily transactions and complete monthly reconciliation'
-      },
-      {
-        step: 4,
-        title: 'Reporting & Review',
-        description: 'Provide monthly financial reports and ensure compliance'
-      }
-    ],
-
+    process: {
+      title: "Our Process",
+      steps: [
+        {
+          number: "01",
+          title: "Initial Consultation",
+          description: "We understand your business needs and current accounting setup"
+        },
+        {
+          number: "02",
+          title: "System Setup",
+          description: "Configure accounting software and integrate with your business processes"
+        },
+        {
+          number: "03",
+          title: "Regular Processing",
+          description: "Daily bookkeeping, invoicing, and transaction recording"
+        },
+        {
+          number: "04",
+          title: "Review & Reporting",
+          description: "Monthly reconciliation and detailed financial reporting"
+        }
+      ]
+    },
     faqs: [
       {
-        question: 'Why do I need accounting services?',
-        answer: 'Accurate accounting helps you understand your business financial position, ensures tax compliance, and helps in making better business decisions.'
+        question: "What accounting software do you use?",
+        answer: "We work with popular platforms like Tally, QuickBooks, Zoho Books, and can adapt to your preferred software."
       },
       {
-        question: 'Is accounting necessary for small businesses?',
-        answer: 'Yes, regardless of size, proper accounting is essential for every business. It is also mandatory for legal compliance.'
+        question: "How often will I receive financial reports?",
+        answer: "You'll receive monthly reports by default, with real-time access to your financial data anytime through our cloud platform."
       },
       {
-        question: 'Which accounting software do you use?',
-        answer: 'We use popular software like Tally, QuickBooks, and Zoho Books, and suggest the best solution based on your requirements.'
+        question: "Do you handle GST compliance?",
+        answer: "Yes, we manage complete GST compliance including registration, filing, and reconciliation."
       },
       {
-        question: 'What are the monthly fees?',
-        answer: 'Fees depend on your business size and transaction volume. We provide a detailed quotation in the free consultation.'
+        question: "What is the pricing structure?",
+        answer: "Our pricing is customized based on your business size and requirements. Contact us for a personalized quote."
       }
     ],
-
     cta: {
-      heading: 'Make Your Accounting Professional',
-      description: 'Book a free consultation today and learn how we can improve your business financial management',
-      buttonText: 'Get Free Consultation'
+      title: "Ready to Streamline Your Accounting?",
+      description: "Let our experts handle your finances while you focus on growing your business",
+      primaryButton: "Schedule Free Consultation",
+      secondaryButton: "Download Brochure"
     }
   },
 
   audit: {
-    id: 'audit',
-    title: 'Audit Services',
-    slug: 'audit-services',
-    heroImage: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&h=600&fit=crop',
-    tagline: 'Independent Financial Verification & Assurance',
-    description: 'Statutory and internal audits conducted with highest professional standards and integrity.',
-    
+    title: "Audit Services",
+    description: "Transparent and accurate auditing services.",
+    features: [
+      "Internal Audit",
+      "Tax Audit",
+      "Statutory Audit"
+    ],
+    hero: {
+      title: "Comprehensive Audit Services",
+      subtitle: "Independent, thorough, and professional audit services you can trust",
+      image: "/images/services/audit-hero.jpg",
+      cta: "Request Audit Quote"
+    },
     about: {
-      heading: 'Trusted Audit Solutions',
-      content: 'Our audit services provide you with complete financial transparency and compliance assurance. Our team of experienced auditors conducts thorough examinations following statutory requirements and best practices.',
+      title: "Expert Audit Solutions",
+      description: "Our audit services provide independent examination of your financial statements, internal controls, and compliance. We help identify risks, improve processes, and ensure regulatory compliance.",
       highlights: [
-        'Statutory audit for companies and firms',
-        'Internal audit and risk assessment',
-        'Tax audit under Income Tax Act',
-        'GST audit and reconciliation'
+        "Certified Chartered Accountants",
+        "Industry-specific expertise",
+        "Detailed audit reports",
+        "Risk assessment and mitigation"
       ]
     },
-
-    features: [
+    detailedFeatures: [
       {
-        icon: '🔐',
-        title: 'Statutory Audit',
-        description: 'Complete statutory audit as per Companies Act and regulatory requirements'
+        icon: "🔍",
+        title: "Internal Audit",
+        description: "Evaluate internal controls, risk management, and operational efficiency"
       },
       {
-        icon: '🎯',
-        title: 'Internal Audit',
-        description: 'Detailed audit to improve internal controls and operational efficiency'
+        icon: "📋",
+        title: "Tax Audit",
+        description: "Comprehensive tax audit under Income Tax Act with complete documentation"
       },
       {
-        icon: '📋',
-        title: 'Tax Audit',
-        description: 'Comprehensive tax audit under Section 44AB of Income Tax Act'
-      },
-      {
-        icon: '✅',
-        title: 'GST Audit',
-        description: 'GST compliance verification and reconciliation of returns and books'
+        icon: "✅",
+        title: "Statutory Audit",
+        description: "Mandatory audit for compliance with Companies Act and regulations"
       }
     ],
-
-    process: [
-      {
-        step: 1,
-        title: 'Planning & Scoping',
-        description: 'Define audit objectives and create a comprehensive audit plan'
-      },
-      {
-        step: 2,
-        title: 'Documentation Review',
-        description: 'Detailed examination of financial records, vouchers, and supporting documents'
-      },
-      {
-        step: 3,
-        title: 'Testing & Verification',
-        description: 'Verify transactions and test the effectiveness of controls'
-      },
-      {
-        step: 4,
-        title: 'Reporting',
-        description: 'Provide detailed audit report and recommendations'
-      }
-    ],
-
+    process: {
+      title: "Our Audit Process",
+      steps: [
+        {
+          number: "01",
+          title: "Planning",
+          description: "Understanding your business, identifying risks, and developing audit strategy"
+        },
+        {
+          number: "02",
+          title: "Fieldwork",
+          description: "Collecting evidence, testing controls, and examining financial records"
+        },
+        {
+          number: "03",
+          title: "Analysis",
+          description: "Evaluating findings, identifying issues, and assessing compliance"
+        },
+        {
+          number: "04",
+          title: "Reporting",
+          description: "Delivering comprehensive audit report with recommendations"
+        }
+      ]
+    },
     faqs: [
       {
-        question: 'Who should get a statutory audit?',
-        answer: 'All companies (Private and Public Limited) must get statutory audit under the Companies Act. Some LLPs also need to get audited.'
+        question: "Who needs a statutory audit?",
+        answer: "Companies registered under the Companies Act, certain partnership firms, and businesses exceeding specified turnover limits require statutory audits."
       },
       {
-        question: 'When is tax audit required?',
-        answer: 'Tax audit is mandatory if business turnover exceeds 1 crore (50 lakh for professionals).'
+        question: "How long does an audit take?",
+        answer: "Typically 2-4 weeks depending on business size and complexity. We provide a detailed timeline after initial assessment."
       },
       {
-        question: 'How long does an audit take?',
-        answer: 'It depends on business size and complexity. Generally, it takes 2-4 weeks.'
+        question: "What documents are required?",
+        answer: "Financial statements, ledgers, invoices, bank statements, tax filings, and relevant business documents."
       },
       {
-        question: 'Do I need to submit documents physically for audit?',
-        answer: 'No, we also accept digital documents. Most work can be done remotely.'
+        question: "Can you help with audit compliance?",
+        answer: "Yes, we provide year-round support to ensure you're audit-ready and compliant with all regulations."
       }
     ],
-
     cta: {
-      heading: 'Need Professional Audit Services?',
-      description: 'Talk to our experienced auditors and discuss your audit requirements',
-      buttonText: 'Schedule Audit Consultation'
+      title: "Ensure Complete Compliance",
+      description: "Get professional audit services from certified experts",
+      primaryButton: "Get Audit Quote",
+      secondaryButton: "Talk to Auditor"
     }
   },
 
   consulting: {
-    id: 'consulting',
-    title: 'Consulting Services',
-    slug: 'consulting-services',
-    heroImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=600&fit=crop',
-    tagline: 'Strategic Tax & Business Advisory',
-    description: 'Expert guidance for tax planning, business structuring, and regulatory compliance.',
-    
+    title: "Consulting Services",
+    description: "Strategic financial and tax consulting.",
+    features: [
+      "Business Planning",
+      "Tax Planning",
+      "Startup Advisory"
+    ],
+    hero: {
+      title: "Strategic Business Consulting",
+      subtitle: "Expert guidance to optimize your business finances and accelerate growth",
+      image: "/images/services/consulting-hero.jpg",
+      cta: "Book Consultation"
+    },
     about: {
-      heading: 'Strategic Business Consultation',
-      content: 'Our consulting services help you optimize tax efficiency and make strategic decisions for business growth. We provide the right direction for your business from legal and tax perspectives.',
+      title: "Transform Your Business Strategy",
+      description: "Our consulting services combine financial expertise with business acumen to help you make strategic decisions, optimize operations, and achieve sustainable growth.",
       highlights: [
-        'Tax planning and optimization strategies',
-        'Business structure advisory',
-        'Regulatory compliance guidance',
-        'Startup incorporation and registration'
+        "Customized business strategies",
+        "Tax optimization experts",
+        "Startup-focused guidance",
+        "Proven track record"
       ]
     },
-
-    features: [
+    detailedFeatures: [
       {
-        icon: '💡',
-        title: 'Tax Planning',
-        description: 'Comprehensive planning to minimize tax liability through legal methods'
+        icon: "💼",
+        title: "Business Planning",
+        description: "Comprehensive business plans, financial projections, and growth strategies"
       },
       {
-        icon: '🏢',
-        title: 'Business Setup',
-        description: 'Company incorporation, GST registration, and all legal compliances'
+        icon: "📊",
+        title: "Tax Planning",
+        description: "Strategic tax planning to minimize liability and maximize savings"
       },
       {
-        icon: '📑',
-        title: 'Compliance Advisory',
-        description: 'Expert guidance for GST, Income Tax, and other regulatory requirements'
-      },
-      {
-        icon: '🎓',
-        title: 'Training & Support',
-        description: 'Provide training to your team on tax and compliance matters'
+        icon: "🚀",
+        title: "Startup Advisory",
+        description: "End-to-end support for startups from incorporation to funding"
       }
     ],
-
-    process: [
-      {
-        step: 1,
-        title: 'Business Analysis',
-        description: 'Analyze your current business structure and requirements in detail'
-      },
-      {
-        step: 2,
-        title: 'Strategy Development',
-        description: 'Develop customized tax planning and business strategies'
-      },
-      {
-        step: 3,
-        title: 'Implementation Support',
-        description: 'Provide step-by-step guidance in implementing strategies'
-      },
-      {
-        step: 4,
-        title: 'Ongoing Advisory',
-        description: 'Provide regular support and updates as per changing regulations'
-      }
-    ],
-
+    process: {
+      title: "Consulting Approach",
+      steps: [
+        {
+          number: "01",
+          title: "Discovery",
+          description: "Deep dive into your business goals, challenges, and current situation"
+        },
+        {
+          number: "02",
+          title: "Strategy Development",
+          description: "Create customized strategies aligned with your objectives"
+        },
+        {
+          number: "03",
+          title: "Implementation",
+          description: "Guide you through execution with hands-on support"
+        },
+        {
+          number: "04",
+          title: "Monitoring",
+          description: "Track progress and adjust strategies for optimal results"
+        }
+      ]
+    },
     faqs: [
       {
-        question: 'Why is tax planning important?',
-        answer: 'Proper tax planning helps you legally save taxes and improve cash flow. It is very important for business efficiency.'
+        question: "What industries do you serve?",
+        answer: "We serve diverse industries including IT, manufacturing, retail, services, and startups across various sectors."
       },
       {
-        question: 'What registrations are needed to start a new business?',
-        answer: 'Depending on business type, you may need PAN, GST registration, Shop Act license, and Professional Tax registration.'
+        question: "How can tax planning help my business?",
+        answer: "Strategic tax planning helps legally reduce tax liability, improve cash flow, and maximize business profitability."
       },
       {
-        question: 'Is Private Limited Company better than Partnership?',
-        answer: 'It depends on your business nature, funding requirements, and future plans. We suggest the best option in detailed consultation.'
+        question: "Do you help with startup funding?",
+        answer: "Yes, we assist with business plans, financial projections, and pitch decks for investor presentations."
       },
       {
-        question: 'How are consulting fees charged?',
-        answer: 'We offer project-based or retainer models. First consultation is free where we discuss the fee structure.'
+        question: "What's included in business planning?",
+        answer: "Market analysis, financial modeling, operational strategy, and actionable roadmaps for growth."
       }
     ],
-
     cta: {
-      heading: 'Give Your Business the Right Direction',
-      description: 'Get free consultation from expert consultants and learn the best strategies for your business',
-      buttonText: 'Book Free Consultation'
+      title: "Take Your Business to the Next Level",
+      description: "Strategic consulting that drives real results",
+      primaryButton: "Schedule Strategy Call",
+      secondaryButton: "View Case Studies"
     }
   },
 
   payroll: {
-    id: 'payroll',
-    title: 'Payroll Management',
-    slug: 'payroll-management',
-    heroImage: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&h=600&fit=crop',
-    tagline: 'Complete Employee Payroll Solutions',
-    description: 'Accurate and timely payroll processing with full compliance and statutory reporting.',
-    
+    title: "Payroll Management",
+    description: "Smooth payroll handling for your employees.",
+    features: [
+      "Salary Processing",
+      "Payslip Generation",
+      "Compliance Filing"
+    ],
+    hero: {
+      title: "Hassle-Free Payroll Management",
+      subtitle: "Accurate, timely, and compliant payroll processing for your peace of mind",
+      image: "/images/services/payroll-hero.jpg",
+      cta: "Start Payroll Service"
+    },
     about: {
-      heading: 'Hassle-Free Payroll Processing',
-      content: 'Our payroll management services free you from all aspects of employee salary processing, statutory compliance, and payroll administration. We ensure accurate, timely, and compliant payroll.',
+      title: "Simplify Your Payroll Operations",
+      description: "Our payroll management service handles everything from salary calculations to statutory compliance, ensuring your employees are paid accurately and on time, every time.",
       highlights: [
-        'Monthly salary processing and disbursement',
-        'PF, ESI, and PT compliance',
-        'TDS calculation and filing',
-        'Payslip generation and Form 16 issuance'
+        "Automated salary processing",
+        "100% compliance guaranteed",
+        "Employee self-service portal",
+        "Dedicated support team"
       ]
     },
-
-    features: [
+    detailedFeatures: [
       {
-        icon: '💵',
-        title: 'Salary Processing',
-        description: 'Accurate calculation of salaries, allowances, deductions, and timely disbursement'
+        icon: "💵",
+        title: "Salary Processing",
+        description: "Automated calculation of salaries, deductions, and reimbursements"
       },
       {
-        icon: '📊',
-        title: 'Statutory Compliance',
-        description: 'Complete compliance and filing of PF, ESI, PT, and Labor Welfare Fund'
+        icon: "📄",
+        title: "Payslip Generation",
+        description: "Digital payslips with detailed breakup sent directly to employees"
       },
       {
-        icon: '🧾',
-        title: 'TDS Management',
-        description: 'Monthly TDS calculation, challan payment, and quarterly TDS return filing'
-      },
-      {
-        icon: '📄',
-        title: 'Payroll Reports',
-        description: 'Detailed payslips, attendance reports, and Form 16 generation'
+        icon: "⚖️",
+        title: "Compliance Filing",
+        description: "PF, ESI, PT, and TDS filing with complete statutory compliance"
       }
     ],
-
-    process: [
-      {
-        step: 1,
-        title: 'Employee Data Setup',
-        description: 'Setup all employee details, salary structure, and deductions in the system'
-      },
-      {
-        step: 2,
-        title: 'Attendance Integration',
-        description: 'Collect monthly attendance data and adjust leaves and overtime'
-      },
-      {
-        step: 3,
-        title: 'Salary Processing',
-        description: 'Calculate salaries, deduct statutory amounts, and process payment'
-      },
-      {
-        step: 4,
-        title: 'Compliance & Reporting',
-        description: 'File all statutory returns and provide payslips to employees'
-      }
-    ],
-
+    process: {
+      title: "How It Works",
+      steps: [
+        {
+          number: "01",
+          title: "Onboarding",
+          description: "Setup employee database, salary structures, and attendance integration"
+        },
+        {
+          number: "02",
+          title: "Data Collection",
+          description: "Monthly attendance, leaves, and variable pay inputs"
+        },
+        {
+          number: "03",
+          title: "Processing",
+          description: "Automated salary calculation with all deductions and additions"
+        },
+        {
+          number: "04",
+          title: "Distribution",
+          description: "Payslips generation and statutory compliance filing"
+        }
+      ]
+    },
     faqs: [
       {
-        question: 'What are the benefits of payroll outsourcing?',
-        answer: 'Payroll outsourcing saves your time, reduces errors, ensures compliance, and allows you to focus on core business.'
+        question: "How secure is employee data?",
+        answer: "We use bank-grade encryption and secure cloud infrastructure. All data is strictly confidential and compliant with data protection laws."
       },
       {
-        question: 'Do you also do attendance tracking?',
-        answer: 'Yes, we receive attendance data and integrate it into payroll. We also work with biometric systems.'
+        question: "Can you handle variable pay components?",
+        answer: "Yes, we handle overtime, bonuses, incentives, reimbursements, and all types of variable pay components."
       },
       {
-        question: 'When is Form 16 issued?',
-        answer: 'Form 16 is issued at the end of every financial year (by June) showing the entire year\'s TDS deduction.'
+        question: "What compliance returns do you file?",
+        answer: "We handle PF returns, ESI returns, Professional Tax, TDS returns, and Form 16 generation."
       },
       {
-        question: 'Can you handle mid-month joining/leaving employees?',
-        answer: 'Absolutely, we do pro-rata salary calculation and properly handle all joining/leaving formalities.'
+        question: "Do you integrate with attendance systems?",
+        answer: "Yes, we integrate with most biometric and attendance management systems for seamless data flow."
       }
     ],
-
     cta: {
-      heading: 'Simplify Your Payroll Management',
-      description: 'Learn about our automated payroll services today and save your time',
-      buttonText: 'Start Payroll Service'
+      title: "Automate Your Payroll Today",
+      description: "Focus on your team while we handle the payroll complexities",
+      primaryButton: "Get Started Now",
+      secondaryButton: "Request Demo"
     }
   }
 };
-
-export default servicesData;

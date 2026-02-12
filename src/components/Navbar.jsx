@@ -10,47 +10,50 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  
+
   const navLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About Us" },
+    { to: "/", label : "Home" },
+    { to: "/about", label : "About Us" },
     { 
       to: "/compliances", 
-      label: "Compliances",
+      label : "Compliances",
       dropdown: [
-        { to: "/compliances/gst", label: "GST Compliance" },
-        { to: "/compliances/income-tax", label: "Income Tax" },
-        { to: "/compliances/corporate", label: "Corporate Compliance" },
-        { to: "/compliances/labor", label: "Labor Laws" }
+        { to: "/compliances/gst", label : "GST Compliance" },
+        { to: "/compliances/income-tax", label : "Income Tax" },
+        { to: "/compliances/corporate", label : "Corporate Compliance" },
+        { to: "/compliances/labor", label : "Labor Laws" }
       ]
     },
-    { 
-      to: "/services", 
-      label: "Services",
-      dropdown: [
-        { to: "/service/accounting", label: "Accounting Services" },
-        { to: "/service/audit", label: "Audit Services" },
-        { to: "/service/consulting", label: "Consulting" },
-        { to: "/service/payroll", label: "Payroll Management" }
-      ]
-    },
+ { 
+  to: "/services", 
+  label : "Services",
+  dropdown: [
+    { to: "/services/accounting",  label : "Accounting Services" },
+    { to: "/services/audit",  label : "Audit Services" },
+    { to: "/services/consulting",  label : "Consulting" },
+    { to: "/services/payroll",  label: "Payroll Management" }
+  ]
+},
+
     { 
       to: "/regulatory", 
-      label: "Regulatory",
+      label : "Regulatory",
       dropdown: [
-        { to: "/regulatory/fema", label: "FEMA" },
-        { to: "/regulatory/rbi", label: "RBI Guidelines" },
-        { to: "/regulatory/sebi", label: "SEBI Regulations" },
-        { to: "/regulatory/mca", label: "MCA Compliance" }
+        { to: "/regulatory/fema", label : "FEMA" },
+        { to: "/regulatory/rbi", label : "RBI Guidelines" },
+        { to: "/regulatory/sebi", label : "SEBI Regulations" },
+        { to: "/regulatory/mca", label : "MCA Compliance" }
       ]
     },
     { 
       to: "/documents", 
-      label: "Documents",
+      label : "Documents",
       dropdown: [
-        { to: "/documents/forms", label: "Forms & Templates" },
-        { to: "/documents/circulars", label: "Circulars" },
-        { to: "/documents/notifications", label: "Notifications" },
-        { to: "/documents/guidelines", label: "Guidelines" }
+        { to: "/documents/forms", label : "Forms & Templates" },
+        { to: "/documents/circulars", label : "Circulars" },
+        { to: "/documents/notifications", label : "Notifications" },
+        { to: "/documents/guidelines", label : "Guidelines" }
       ]
     }
   ];
@@ -68,7 +71,7 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Desktop Navigation */}
+       
           <div className="hidden md:flex space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
               <div
