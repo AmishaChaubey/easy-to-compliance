@@ -1,8 +1,12 @@
-import React from 'react';
+import React ,{useEffect} from 'react';
 import { ArrowRight, FileText, Calculator, Users, TrendingUp, Shield, Award, Clock, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
 import Testimonial from './home/Testimonial';
 
 const TaxWebsite = () => {
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
     
