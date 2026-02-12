@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import About from './pages/About/about'
 import Home from "./pages/Home";
-import AboutPage from "./pages/About/about";
-import "./App.css";
-import ServicePage from "./pages/services/ServicePage";
+
+import Design from "./pages/services/Design";
+import Services from "./pages/services/Services";
+import Compliance from "./pages/compilance/Compliance"
+
 
 const App = () => {
   return (
@@ -18,8 +20,13 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services/:serviceId" element={<ServicePage/>} />
+
+
+
+        <Route path="/design" element={<Design />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/compliance" element={<Compliance />} />
 
       </Routes>
 
