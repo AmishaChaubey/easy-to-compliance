@@ -66,11 +66,11 @@ const BlogFrontend = () => {
               Blogs 
             </h1>
             {/* <div className="w-10 xs:w-12 sm:w-16 mb-3 xs:mb-4 h-[3px] bg-red-500"></div> */}
-            <p className="text-white text-[10px] xs:text-xs sm:text-sm md:text-base leading-relaxed max-w-lg">
-              Since 2021 we have been contsantly blending up to perfection<br className="hidden xs:block" />
-              Our Blu Kings offerings come to you from the roots of nature<br className="hidden xs:block" />
-              Pure , prestine and blended to perfection to give you memorizable Taste
-            </p>
+<p className="text-white text-[10px] xs:text-xs sm:text-sm md:text-base leading-relaxed max-w-xl">
+  Since 2021, we have been delivering reliable and professional taxation services <br className="hidden xs:block" />
+  Our expert team ensures accurate compliance and hassle-free filing solutions<br className="hidden xs:block" />
+  Trusted, transparent, and committed to helping you achieve financial clarity
+</p>
           </div>
         </div>
       </div>

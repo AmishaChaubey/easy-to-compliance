@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ArrowRight, FileText, Calculator, Users, TrendingUp, Shield, Award, Clock, Phone, Mail, MapPin, CheckCircle } from 'lucide-react';
 import Testimonial from './home/Testimonial';
+import { Link } from 'react-router-dom';
 
 const TaxWebsite = () => {
   useEffect(() => {
@@ -320,6 +321,8 @@ const TaxWebsite = () => {
                 <p className="hero-subtitle mb-4 sm:mb-6 md:mb-8 text-gray-100 leading-relaxed">
                   Maximize your returns with professional tax planning and preparation services tailored to your needs.
                 </p>
+
+                <Link to="/contact">
                 <button 
                   className="hero-btn inline-flex items-center text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:opacity-90 hover:shadow-xl" 
                   style={{ backgroundColor: '#135192' }}
@@ -327,6 +330,7 @@ const TaxWebsite = () => {
                   Schedule Consultation 
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -401,9 +405,11 @@ const TaxWebsite = () => {
                   </li>
                 ))}
               </ul>
+              <Link to="/contact">
               <button className="w-full py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base text-white font-semibold rounded-lg transition-all duration-300 hover:opacity-90 shadow-md" style={{ backgroundColor: '#135192' }}>
                 Get Started
               </button>
+              </Link>
             </div>
 
             {/* Income Tax Filing */}
@@ -425,9 +431,12 @@ const TaxWebsite = () => {
                   </li>
                 ))}
               </ul>
+
+              <Link to="/contact">
               <button className="w-full py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base text-white font-semibold rounded-lg transition-all duration-300 hover:opacity-90 shadow-md" style={{ backgroundColor: '#135192' }}>
                 File Now
               </button>
+              </Link>
             </div>
 
             {/* GST Services */}
@@ -449,9 +458,12 @@ const TaxWebsite = () => {
                   </li>
                 ))}
               </ul>
+
+              <Link to="/contact">
               <button className="w-full py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base text-white font-semibold rounded-lg transition-all duration-300 hover:opacity-90 shadow-md" style={{ backgroundColor: '#135192' }}>
                 Learn More
               </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -486,9 +498,9 @@ const TaxWebsite = () => {
                 <p className="service-desc text-gray-600 mb-2 sm:mb-3 md:mb-4 leading-relaxed">
                   {service.desc}
                 </p>
-                <a href="#" className="inline-flex items-center service-desc font-semibold hover:underline transition-all" style={{ color: '#135192' }}>
-                  Learn More <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                </a>
+                <Link to="/contact" className="inline-flex items-center service-desc font-semibold hover:underline transition-all" style={{ color: '#135192' }}>
+                  Visit us <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
+                </Link>
               </div>
             ))}
           </div>
@@ -614,12 +626,17 @@ const TaxWebsite = () => {
                 Get expert tax advice and save more with personalized consultation.
               </p>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2 justify-center lg:justify-start">
+                <Link to="/about">
                 <button className="px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-[#135192] font-medium rounded-md transition-all duration-300 hover:bg-gray-100 text-sm sm:text-base">
-                  Book Consultation
+                  About us
                 </button>
+                </Link>
+
+                <Link to="/contact">
                 <button className="px-4 sm:px-5 py-2 sm:py-2.5 border border-white text-white rounded-md transition-all duration-300 hover:bg-white hover:text-[#135192] text-sm sm:text-base">
                   Call Now
                 </button>
+                </Link>
               </div>
             </div>
 
@@ -696,9 +713,9 @@ const TaxWebsite = () => {
                   <p className="service-desc text-gray-600 mb-3 sm:mb-4 md:mb-6 leading-relaxed">
                     {post.excerpt}
                   </p>
-                  <a href="#" className="inline-flex items-center service-desc font-semibold hover:underline transition-transform group-hover:translate-x-2" style={{ color: '#135192' }}>
+                  <Link to="/blog" className="inline-flex items-center service-desc font-semibold hover:underline transition-transform group-hover:translate-x-2" style={{ color: '#135192' }}>
                     Read More <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

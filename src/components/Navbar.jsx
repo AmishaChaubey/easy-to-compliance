@@ -99,7 +99,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <div
                   key={link.to}
-                  className="relative group"
+                  className="relative"
                   onMouseEnter={() => link.dropdown && setOpenDropdown(link.to)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
@@ -118,18 +118,20 @@ const Navbar = () => {
                     )}
                   </Link>
 
-                  {/* Desktop Dropdown */}
+                  {/* Desktop Dropdown - removed mt-1 gap */}
                   {link.dropdown && openDropdown === link.to && (
-                    <div className="absolute left-0 top-full mt-1 w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50">
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.to}
-                          to={item.to}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#135192] transition-colors"
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
+                    <div className="absolute left-0 top-full pt-2 z-50">
+                      <div className="w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-2">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.to}
+                            to={item.to}
+                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#135192] transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>

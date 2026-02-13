@@ -143,6 +143,10 @@ const Regulatory = () => {
     5: Settings
   };
 
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+    
   return (
     <div className="min-h-screen bg-white">
       
