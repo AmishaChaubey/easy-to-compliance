@@ -33,7 +33,7 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMenuOpen]);
 
-  // Prevent body scroll when mobile menu is open
+  // Prevent body scroll  when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -53,7 +53,7 @@ const Navbar = () => {
       ],
     },
     {
-      to: "#services",
+      to: "#",
       label: "Services",
       dropdown: [
         { to: "/services/accounting", label: "Accounting Services" },
@@ -63,7 +63,7 @@ const Navbar = () => {
       ],
     },
     {
-      to: "#regulatory",
+      to: "#",
       label: "Regulatory",
       dropdown: [
         { to: "/regulatory/fema", label: "FEMA" },
