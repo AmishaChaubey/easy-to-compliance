@@ -16,17 +16,20 @@ const Navbar = () => {
     { to: "/", label : "Home" },
     { to: "/about", label : "About Us" },
     { 
-      to: "/compliances", 
-      label : "Compliances",
+
+      to: "/compliance", 
+      label : "Compliance",
       dropdown: [
-        { to: "/compliances/gst", label : "GST Compliance" },
-        { to: "/compliances/income-tax", label : "Income Tax" },
-        { to: "/compliances/corporate", label : "Corporate Compliance" },
-        { to: "/compliances/labor", label : "Labor Laws" }
-      ]
-    },
+        { to: "/compliance/gst-compliance", label : "GST Compliance" },
+        { to: "/compliance/income-tax-compliance", label : "Income Tax" },
+        { to: "/compliance/corporate-compliance", label : "Corporate Compliance" },
+        { to: "/compliance/labour-law-compliance", label : "Labor Laws" },
+
+    
+      ]},
+   
  { 
-  to: "/services", 
+  to: "#", 
   label : "Services",
   dropdown: [
     { to: "/services/accounting",  label : "Accounting Services" },
@@ -37,7 +40,7 @@ const Navbar = () => {
 },
 
     { 
-      to: "/regulatory", 
+      to: "#", 
       label : "Regulatory",
       dropdown: [
         { to: "/regulatory/fema", label : "FEMA" },
@@ -48,14 +51,16 @@ const Navbar = () => {
     },
     { 
       to: "/documents", 
+
       label : "Documents",
-      dropdown: [
-        { to: "/documents/forms", label : "Forms & Templates" },
-        { to: "/documents/circulars", label : "Circulars" },
-        { to: "/documents/notifications", label : "Notifications" },
-        { to: "/documents/guidelines", label : "Guidelines" }
-      ]
+     
     }
+
+   ,
+  
+  
+    {to: "/blog", label: "Blog" }
+
   ];
 
   return (
@@ -107,12 +112,14 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA Button */}
+          <Link to="/contact">
           <button
             className="hidden md:block px-4 lg:px-6 py-2 lg:py-3 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity text-sm lg:text-base"
             style={{ backgroundColor: "#135192" }}
           >
             Contact Us
           </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button

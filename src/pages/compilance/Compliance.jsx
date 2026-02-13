@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { ChevronDown, CheckCircle, Shield, FileText, TrendingUp, Users, Clock, Award, ArrowRight, Sparkles, Star } from 'lucide-react';
 
 const CompliancePage = () => {
@@ -9,18 +9,15 @@ const CompliancePage = () => {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="bg-white min-h-screen overflow-x-hidden">
+    <div className="bg-white min-h-screen overflow-x-hidden font-serif">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
         
-        * {
-          font-family: 'Inter', sans-serif;
-        }
-        
-        h1, h2, h3 {
-          font-family: 'Merriweather', serif;
-        }
+      
         
         @keyframes fadeInUp {
           from {
@@ -67,7 +64,12 @@ const CompliancePage = () => {
       `}</style>
 
       {/* Hero Section */}
-      <section className="relative bg-[#135192] text-white pt-32 pb-48 px-4">
+      <section className="relative text-white pt-5 pb-5 px-4 min-h-screen font-serif"
+        style={{
+          backgroundImage: 'url("https://i.pinimg.com/1200x/8d/2a/49/8d2a496c6d4c6df1ff93098a2c342656.jpg")',
+          backgroundSize: 'cover',    }}>
+                    <div className="absolute inset-0 bg-black opacity-60"></div>
+
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-8 animate-fadeInUp">
@@ -93,33 +95,20 @@ const CompliancePage = () => {
               </button>
             </div>
             
-            <div className="flex flex-wrap gap-12 animate-fadeInUp delay-400">
-              <div>
-                <div className="text-4xl font-bold mb-2">99.9%</div>
-                <div className="text-white/70 text-sm">Accuracy Rate</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">500+</div>
-                <div className="text-white/70 text-sm">Happy Clients</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">24/7</div>
-                <div className="text-white/70 text-sm">Support Available</div>
-              </div>
-            </div>
+        
           </div>
         </div>
       </section>
 
       {/* Service Categories */}
-      <section className="relative  py-16 px-4">
+      <section className="relative  py-16 px-4 ">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <span className="text-[#135192] font-semibold text-sm tracking-wider uppercase mb-4 block">Our Services</span>
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
               Comprehensive Compliance Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-serif">
               Tailored tax compliance services designed to meet your unique business needs
             </p>
           </div>
