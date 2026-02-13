@@ -543,7 +543,7 @@ const Footer = () => {
                 {[
                
                   { name: "About Us", path: "/about" },
-                  { name: "Compilance", path: "/compliance" },
+                  { name: "Compliance", path: "/compliance" },
                   { name: "Blog", path: "/blog" },
                   { name: "Contact", path: "/contact" },
              
