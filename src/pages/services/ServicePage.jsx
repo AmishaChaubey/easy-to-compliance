@@ -85,6 +85,10 @@ const tableOfContents = [
 ];
 
 
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
+  
   return (
     <div className="min-h-screen bg-white font-serif">
       

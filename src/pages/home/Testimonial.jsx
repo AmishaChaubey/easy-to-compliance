@@ -2,52 +2,48 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Testimonials = () => {
-
-
-    
-const testimonials = [
-  {
-    name: 'Amit Sharma',
-    role: 'Small Business Owner',
-    text: 'Easy to Compliance has made all my tax and compliance work completely stress-free. From GST filings to annual returns, everything is handled on time and accurately.'
-  },
-  {
-    name: 'Rohit Mehta',
-    role: 'Marketing Executive',
-    text: 'I’ve been using Easy to Compliance for years now. They simplify tax filings and ensure I never miss a deadline. Reliable and very professional service.'
-  },
-  {
-    name: 'Neha Verma',
-    role: 'Freelance Consultant',
-    text: 'Handling compliance as a freelancer was confusing until I found Easy to Compliance. They explained everything clearly and took care of all my filings smoothly.'
-  },
-  {
-    name: 'Sanjay Kapoor',
-    role: 'Real Estate Investor',
-    text: 'Property-related compliance and tax filings can get complex, but Easy to Compliance managed everything efficiently. Their knowledge and support are excellent.'
-  },
-  {
-    name: 'Priya Malhotra',
-    role: 'Tech Startup Founder',
-    text: 'Easy to Compliance truly understands startup compliance. From company filings to ongoing regulatory requirements, they’ve been a dependable partner for our growth.'
-  },
-  {
-    name: 'Vikram Singh',
-    role: 'Restaurant Owner',
-    text: 'They handle all my business compliance, GST returns, and tax filings with great accuracy. Very professional, responsive, and trustworthy team.'
-  },
-  {
-    name: 'Ananya Gupta',
-    role: 'E-commerce Entrepreneur',
-    text: 'Multi-state GST compliance was overwhelming before Easy to Compliance stepped in. They streamlined everything and saved me from penalties and errors.'
-  },
-  {
-    name: 'Rahul Iyer',
-    role: 'Corporate Legal Advisor',
-    text: 'Even with a legal background, I prefer Easy to Compliance for tax and regulatory filings. Their attention to detail and proactive reminders stand out.'
-  }
-];
-
+  const testimonials = [
+    {
+      name: 'Amit Sharma',
+      role: 'Small Business Owner',
+      text: 'Easy to Compliance has made all my tax and compliance work completely stress-free. From GST filings to annual returns, everything is handled on time and accurately.'
+    },
+    {
+      name: 'Rohit Mehta',
+      role: 'Marketing Executive',
+      text: 'I have been using Easy to Compliance for years now. They simplify tax filings and ensure I never miss a deadline. Reliable and very professional service.'
+    },
+    {
+      name: 'Neha Verma',
+      role: 'Freelance Consultant',
+      text: 'Handling compliance as a freelancer was confusing until I found Easy to Compliance. They explained everything clearly and took care of all my filings smoothly.'
+    },
+    {
+      name: 'Sanjay Kapoor',
+      role: 'Real Estate Investor',
+      text: 'Property-related compliance and tax filings can get complex, but Easy to Compliance managed everything efficiently. Their knowledge and support are excellent.'
+    },
+    {
+      name: 'Priya Malhotra',
+      role: 'Tech Startup Founder',
+      text: 'Easy to Compliance truly understands startup compliance. From company filings to ongoing regulatory requirements, they have been a dependable partner for our growth.'
+    },
+    {
+      name: 'Vikram Singh',
+      role: 'Restaurant Owner',
+      text: 'They handle all my business compliance, GST returns, and tax filings with great accuracy. Very professional, responsive, and trustworthy team.'
+    },
+    {
+      name: 'Ananya Gupta',
+      role: 'E-commerce Entrepreneur',
+      text: 'Multi-state GST compliance was overwhelming before Easy to Compliance stepped in. They streamlined everything and saved me from penalties and errors.'
+    },
+    {
+      name: 'Rahul Iyer',
+      role: 'Corporate Legal Advisor',
+      text: 'Even with a legal background, I prefer Easy to Compliance for tax and regulatory filings. Their attention to detail and proactive reminders stand out.'
+    }
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -56,9 +52,10 @@ const testimonials = [
   // Determine slides per view based on screen size
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      const width = window.innerWidth;
+      if (width < 640) {
         setSlidesPerView(1); // Mobile
-      } else if (window.innerWidth < 1024) {
+      } else if (width < 1024) {
         setSlidesPerView(2); // Tablet
       } else {
         setSlidesPerView(3); // Desktop
@@ -95,46 +92,254 @@ const testimonials = [
     );
   };
 
-  const maxIndex = testimonials.length - slidesPerView;
+  const maxIndex = Math.max(0, testimonials.length - slidesPerView);
 
   return (
-    <div className="py-12 sm:py-14 md:py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div className="py-10 sm:py-12 md:py-14 lg:py-16 bg-gradient-to-b from-gray-50 to-white ">
+      <style jsx>{`
+        /* Responsive Styles */
+        .testimonial-section-title {
+          font-size: 1.5rem;
+          line-height: 1.2;
+        }
+        
+        .testimonial-section-subtitle {
+          font-size: 0.875rem;
+        }
+        
+        .nav-button {
+          padding: 0.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+        
+        .nav-button svg {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+        
+        .testimonial-card {
+          padding: 1.25rem;
+        }
+        
+        .star-icon {
+          width: 1rem;
+          height: 1rem;
+        }
+        
+        .testimonial-text {
+          font-size: 0.875rem;
+          margin-bottom: 1rem;
+        }
+        
+        .author-name {
+          font-size: 0.875rem;
+        }
+        
+        .author-role {
+          font-size: 0.75rem;
+        }
+        
+        .dot-indicator {
+          height: 0.625rem;
+          width: 0.625rem;
+        }
+        
+        .dot-indicator.active {
+          width: 1.5rem;
+        }
+        
+        .carousel-container {
+          padding: 0 2rem;
+        }
+        
+        /* Tablet Breakpoint (640px+) */
+        @media (min-width: 640px) {
+          .testimonial-section-title {
+            font-size: 2.25rem;
+          }
+          
+          .testimonial-section-subtitle {
+            font-size: 1rem;
+          }
+          
+          .nav-button {
+            padding: 0.625rem;
+            width: 2.75rem;
+            height: 2.75rem;
+          }
+          
+          .nav-button svg {
+            width: 1.375rem;
+            height: 1.375rem;
+          }
+          
+          .testimonial-card {
+            padding: 1.5rem;
+          }
+          
+          .star-icon {
+            width: 1.125rem;
+            height: 1.125rem;
+          }
+          
+          .testimonial-text {
+            font-size: 0.9375rem;
+            margin-bottom: 1.25rem;
+          }
+          
+          .author-name {
+            font-size: 1rem;
+          }
+          
+          .author-role {
+            font-size: 0.8125rem;
+          }
+          
+          .dot-indicator {
+            height: 0.6875rem;
+            width: 0.6875rem;
+          }
+          
+          .dot-indicator.active {
+            width: 1.75rem;
+          }
+          
+          .carousel-container {
+            padding: 0 2.5rem;
+          }
+        }
+        
+        /* Desktop Breakpoint (768px+) */
+        @media (min-width: 768px) {
+          .testimonial-section-title {
+            font-size: 2.5rem;
+          }
+          
+          .testimonial-section-subtitle {
+            font-size: 1.125rem;
+          }
+          
+          .testimonial-text {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+          }
+          
+          .author-name {
+            font-size: 1.0625rem;
+          }
+          
+          .author-role {
+            font-size: 0.875rem;
+          }
+        }
+        
+        /* Large Desktop Breakpoint (1024px+) */
+        @media (min-width: 1024px) {
+          .testimonial-section-title {
+            font-size: 3rem;
+          }
+          
+          .testimonial-section-subtitle {
+            font-size: 1.25rem;
+          }
+          
+          .nav-button {
+            padding: 0.75rem;
+            width: 3rem;
+            height: 3rem;
+          }
+          
+          .nav-button svg {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+          
+          .testimonial-card {
+            padding: 2rem;
+          }
+          
+          .star-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+          
+          .testimonial-text {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+          }
+          
+          .author-name {
+            font-size: 1.125rem;
+          }
+          
+          .author-role {
+            font-size: 0.9375rem;
+          }
+          
+          .dot-indicator {
+            height: 0.75rem;
+            width: 0.75rem;
+          }
+          
+          .dot-indicator.active {
+            width: 2rem;
+          }
+          
+          .carousel-container {
+            padding: 0 3rem;
+          }
+        }
+        
+        /* Smooth transitions */
+        .testimonial-slide {
+          transition: transform 500ms ease-in-out;
+        }
+        
+        /* Card hover effect - only on devices with hover capability */
+        @media (hover: hover) and (pointer: fine) {
+          .testimonial-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          }
+        }
+      `}</style>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 font-serif">
+        <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+          <h2 className="testimonial-section-title font-bold text-gray-900 mb-2 sm:mb-3 md:mb-4 font-serif">
             What Our Clients Say
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600">
+          <p className="testimonial-section-subtitle text-gray-600">
             Hear from satisfied clients who trust us with their tax needs
           </p>
         </div>
 
         <div 
-          className="relative px-8 sm:px-10 md:px-12"
+          className="carousel-container relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 sm:p-3 shadow-lg hover:bg-gray-100 transition-all duration-200"
+            className="nav-button absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center"
             aria-label="Previous testimonials"
           >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
+            <ChevronLeft className="text-gray-800" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 sm:p-3 shadow-lg hover:bg-gray-100 transition-all duration-200"
+            className="nav-button absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-all duration-200 flex items-center justify-center"
             aria-label="Next testimonials"
           >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-800" />
+            <ChevronRight className="text-gray-800" />
           </button>
 
           {/* Testimonials Container */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden py-15" >
             <div
-              className="flex transition-transform duration-500 ease-in-out"
+              className="testimonial-slide flex"
               style={{
                 transform: `translateX(-${currentIndex * (100 / slidesPerView)}%)`
               }}
@@ -142,19 +347,20 @@ const testimonials = [
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className={`flex-shrink-0 px-2 sm:px-3 md:px-4 ${
-                    slidesPerView === 1 ? 'w-full' :
-                    slidesPerView === 2 ? 'w-1/2' :
-                    'w-1/3'
-                  }`}
+                  className="flex-shrink-0 px-2 sm:px-3 md:px-4"
+                  style={{
+                    width: slidesPerView === 1 ? '100%' :
+                           slidesPerView === 2 ? '50%' :
+                           '33.333333%'
+                  }}
                 >
-                  <div className="bg-white rounded-lg shadow-lg p-5 sm:p-6 md:p-8 h-full hover:shadow-xl transition-shadow duration-300">
+                  <div className="testimonial-card bg-white rounded-lg shadow-lg h-full transition-shadow duration-300">
                     {/* Star Rating */}
                     <div className="flex mb-3 sm:mb-4">
                       {[...Array(5)].map((_, i) => (
                         <svg
                           key={i}
-                          className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current"
+                          className="star-icon text-yellow-400 fill-current"
                           viewBox="0 0 20 20"
                         >
                           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
@@ -163,16 +369,16 @@ const testimonials = [
                     </div>
 
                     {/* Testimonial Text */}
-                    <p className="text-gray-700 text-sm sm:text-base md:text-lg mb-4 sm:mb-5 md:mb-6 italic leading-relaxed">
+                    <p className="testimonial-text text-gray-700 italic leading-relaxed">
                       "{testimonial.text}"
                     </p>
 
                     {/* Author Info */}
                     <div className="border-t pt-3 sm:pt-4">
-                      <p className="font-semibold text-gray-900 text-base sm:text-lg">
+                      <p className="author-name font-semibold text-gray-900 mb-0.5">
                         {testimonial.name}
                       </p>
-                      <p className="text-gray-600 text-sm sm:text-base">
+                      <p className="author-role text-gray-600">
                         {testimonial.role}
                       </p>
                     </div>
@@ -183,15 +389,15 @@ const testimonials = [
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 sm:mt-7 md:mt-8 gap-1.5 sm:gap-2">
+          <div className="flex justify-center mt-5 sm:mt-6 md:mt-7 lg:mt-8 gap-1.5 sm:gap-2">
             {[...Array(maxIndex + 1)].map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2.5 sm:h-3 rounded-full transition-all duration-300 ${
+                className={`dot-indicator rounded-full transition-all duration-300 ${
                   currentIndex === index 
-                    ? 'bg-[#135192] w-6 sm:w-8' 
-                    : 'bg-gray-300 hover:bg-gray-400 w-2.5 sm:w-3'
+                    ? 'active bg-[#135192]' 
+                    : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
