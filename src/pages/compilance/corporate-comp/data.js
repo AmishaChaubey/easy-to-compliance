@@ -1,102 +1,127 @@
 import { Calendar, FileText, AlertCircle, CheckCircle, ChevronDown, List, BookOpen } from 'lucide-react';
 
-export const taxComplianceData = {
+const taxComplianceData = {
   heroData: {
-    title: 'Tax Compliance Services',
-    description: 'Comprehensive tax compliance solutions for individuals and businesses. Stay compliant, avoid penalties, and maximize your savings.',
-    backgroundImage: '/banner-img/corporate.png',
-    primaryButtonText: 'Get Started',
-    secondaryButtonText: 'Contact Us'
+    title: 'Corporate Compliance Services',
+    description:
+      'Comprehensive corporate compliance solutions to help companies meet legal, regulatory, and statutory requirements under applicable laws.',
+    backgroundImage: '/banner-img/labor.png',
+    primaryButtonText: 'Get Compliance Support',
+    secondaryButtonText: 'Consult Expert'
   },
 
   bannerData: {
     title: 'Important:',
-    message: 'Delayed filing of your Income Tax Return may lead to penalties, interest, and loss of certain benefits. Ensure timely compliance to stay stress-free!'
+    message:
+      'Non-compliance with corporate laws may lead to heavy penalties, director disqualification, and legal complications. Ensure timely filings to keep your company compliant and risk-free.'
   },
 
   tableOfContents: [
     { id: 'hero', label: 'Overview', icon: BookOpen },
-    { id: 'services', label: 'Services Covered', icon: CheckCircle },
-    { id: 'due-dates', label: 'Due Dates', icon: Calendar },
+    { id: 'services', label: 'Corporate Services Covered', icon: CheckCircle },
+    { id: 'due-dates', label: 'Important Due Dates', icon: Calendar },
     { id: 'documents', label: 'Documents Required', icon: FileText },
-    { id: 'penalties', label: 'Penalties & Late Fees', icon: AlertCircle },
-    { id: 'process', label: 'Filing Process', icon: List },
-    { id: 'faq', label: 'FAQs', icon: ChevronDown },
+    { id: 'penalties', label: 'Penalties & Consequences', icon: AlertCircle },
+    { id: 'process', label: 'Compliance Process', icon: List },
+    { id: 'faq', label: 'FAQs', icon: ChevronDown }
   ],
 
   services: [
     {
-      title: 'Income Tax Return Filing',
-      description: 'Complete assistance with ITR filing for individuals and businesses',
-      features: ['Form selection', 'Tax computation', 'Deduction optimization']
+      title: 'ROC Annual Filing',
+      description: 'Filing of annual returns and financial statements with ROC',
+      features: ['AOC-4 Filing', 'MGT-7 Filing', 'Director KYC (DIR-3 KYC)']
     },
     {
-      title: 'GST Compliance',
-      description: 'Monthly and quarterly GST return filing services',
-      features: ['GSTR-1', 'GSTR-3B', 'Annual returns']
+      title: 'Company Incorporation Compliance',
+      description: 'Post-incorporation compliance and documentation support',
+      features: ['INC-20A Filing', 'Share Certificate Issuance', 'Statutory Register Maintenance']
     },
     {
-      title: 'Tax Planning',
-      description: 'Strategic tax planning to minimize your tax liability',
-      features: ['Investment advisory', 'Tax-saving schemes', 'Year-end planning']
+      title: 'Board & General Meeting Compliance',
+      description: 'Compliance related to board meetings and annual general meetings',
+      features: ['Notice drafting', 'Minutes preparation', 'Resolution filing (MCA Forms)']
     },
     {
-      title: 'Audit Support',
-      description: 'Comprehensive support during tax audits and assessments',
-      features: ['Documentation', 'Representation', 'Compliance review']
+      title: 'Event-Based Compliance',
+      description: 'Filing of forms for change in directors, address, or capital',
+      features: ['DIR-12 Filing', 'PAS-3 Filing', 'Change in Registered Office']
     }
   ],
 
   dueDates: [
-    { period: 'Q1 (Apr-Jun)', date: 'July 31, 2024', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Q2 (Jul-Sep)', date: 'October 31, 2024', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Q3 (Oct-Dec)', date: 'January 31, 2025', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Annual', date: 'July 31, 2024', type: 'Annual Return', status: 'critical' },
+    { period: 'DIR-3 KYC', date: '30th September', type: 'Director Compliance', status: 'critical' },
+    { period: 'AOC-4', date: 'Within 30 days of AGM', type: 'Financial Statement Filing', status: 'important' },
+    { period: 'MGT-7', date: 'Within 60 days of AGM', type: 'Annual Return Filing', status: 'important' },
+    { period: 'INC-20A', date: 'Within 180 days of Incorporation', type: 'Commencement Certificate', status: 'upcoming' }
   ],
 
   documents: [
-    { category: 'Identity Proof', items: ['PAN Card', 'Aadhaar Card', 'Passport'] },
-    { category: 'Income Proof', items: ['Form 16/16A', 'Salary Slips', 'Bank Statements', 'TDS Certificates'] },
-    { category: 'Investment Proof', items: ['LIC Premium Receipts', 'PPF Statements', 'ELSS Statements', 'Home Loan Certificates'] },
-    { category: 'Business Documents', items: ['P&L Statement', 'Balance Sheet', 'GST Returns', 'Audit Reports'] },
+    { category: 'Company Documents', items: ['Certificate of Incorporation', 'MOA & AOA', 'PAN & TAN'] },
+    { category: 'Financial Documents', items: ['Balance Sheet', 'Profit & Loss Statement', 'Audit Report'] },
+    { category: 'Director Details', items: ['DIN', 'PAN Card', 'Aadhaar Card', 'Email & Mobile Linked to DIN'] },
+    { category: 'Meeting Documents', items: ['Board Resolutions', 'AGM Minutes', 'Shareholder Register'] }
   ],
 
   penalties: [
-    { violation: 'Late filing of returns', penalty: '₹5,000', additionalInfo: 'Interest charged at 1% per month' },
-    { violation: 'Non-filing of returns', penalty: '₹10,000', additionalInfo: 'Plus prosecution under Section 276CC' },
-    { violation: 'Delayed tax payment', penalty: '1% per month', additionalInfo: 'On unpaid tax amount' },
-    { violation: 'Incorrect information', penalty: 'Up to ₹50,000', additionalInfo: 'Penalty under Section 270A' },
+    {
+      violation: 'Late ROC filing',
+      penalty: '₹100 per day per form',
+      additionalInfo: 'No maximum limit on additional fees'
+    },
+    {
+      violation: 'Non-filing of Annual Return',
+      penalty: 'Heavy penalties on company and directors',
+      additionalInfo: 'May lead to director disqualification'
+    },
+    {
+      violation: 'Failure to conduct AGM',
+      penalty: 'Penalty on company and officers in default',
+      additionalInfo: 'As per Companies Act provisions'
+    },
+    {
+      violation: 'Incorrect or false reporting',
+      penalty: 'Fine and possible legal action',
+      additionalInfo: 'As per Companies Act, 2013'
+    }
   ],
 
   filingSteps: [
-    { step: 1, title: 'Document Collection', description: 'Gather all necessary documents including Form 16, investment proofs, and bank statements' },
-    { step: 2, title: 'Data Verification', description: 'Our experts verify all information for accuracy and completeness' },
-    { step: 3, title: 'Return Preparation', description: 'Prepare your tax return with optimized deductions and exemptions' },
-    { step: 4, title: 'Review & Approval', description: 'You review the prepared return and provide final approval' },
-    { step: 5, title: 'E-Filing', description: 'Submit your return electronically to the Income Tax Department' },
-    { step: 6, title: 'Verification', description: 'Complete ITR-V verification through Aadhaar OTP or sending signed copy' },
+    { step: 1, title: 'Document Collection', description: 'Collect financial statements, director details, and company records' },
+    { step: 2, title: 'Compliance Review', description: 'Review statutory registers and ensure all requirements are met' },
+    { step: 3, title: 'Form Preparation', description: 'Prepare relevant MCA forms and supporting documents' },
+    { step: 4, title: 'Client Approval', description: 'Share drafts for verification and approval' },
+    { step: 5, title: 'Online Filing', description: 'File forms on the MCA portal within due dates' },
+    { step: 6, title: 'Acknowledgement & Record Maintenance', description: 'Provide SRN acknowledgement and maintain compliance records' }
   ],
 
   faqs: [
     {
-      question: 'What is the last date for filing income tax returns?',
-      answer: 'For individuals (non-audit cases), the due date is July 31st of the assessment year. For businesses requiring audit, the due date is October 31st.'
+      question: 'What is ROC compliance?',
+      answer:
+        'ROC compliance refers to mandatory filings and legal requirements that companies must complete with the Registrar of Companies under the Companies Act.'
     },
     {
-      question: 'Can I file my return after the due date?',
-      answer: 'Yes, you can file a belated return up to December 31st of the assessment year. However, you will have to pay a late filing fee of ₹5,000 (₹1,000 if income is below ₹5 lakhs).'
+      question: 'Is annual filing mandatory for all companies?',
+      answer:
+        'Yes, every registered company must file annual returns and financial statements, even if there is no business activity.'
     },
     {
-      question: 'What happens if I miss the deadline completely?',
-      answer: 'If you miss the December 31st deadline, you cannot file a belated return. You may only file if the tax department issues a notice. Additionally, you will lose the ability to carry forward certain losses.'
+      question: 'What happens if ROC forms are not filed?',
+      answer:
+        'Late filing attracts additional fees of ₹100 per day and may lead to penalties or director disqualification.'
     },
     {
-      question: 'How can I track my refund status?',
-      answer: 'You can track your refund status on the Income Tax e-filing portal using your PAN and assessment year. Refunds are typically processed within 4-6 weeks of successful verification.'
+      question: 'What is DIR-3 KYC?',
+      answer:
+        'DIR-3 KYC is a mandatory annual KYC filing for directors holding a DIN to keep their DIN active.'
     },
     {
-      question: 'Is it mandatory to link PAN with Aadhaar?',
-      answer: 'Yes, linking PAN with Aadhaar is mandatory. Failure to link may result in your PAN becoming inoperative, affecting all financial transactions.'
-    },
+      question: 'Can a company be struck off for non-compliance?',
+      answer:
+        'Yes, continuous non-compliance may result in the company being struck off by the Registrar of Companies.'
+    }
   ]
 };
+
+export default taxComplianceData;

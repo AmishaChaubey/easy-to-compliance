@@ -38,7 +38,7 @@ const CompliancePage = () => {
 
         /* ── Fluid hero type ── */
         .hero-title {
-          font-size: clamp(2.25rem, 8vw, 6rem);
+          font-size: clamp(2.25rem, 5vw, 6rem);
           line-height: 1.1;
         }
         .hero-sub {

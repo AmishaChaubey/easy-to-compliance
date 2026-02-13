@@ -1,6 +1,6 @@
 import React from 'react';
 import TaxCompliancePage from '../DetailedPage';
-import { taxComplianceData } from './data';
+import taxComplianceData from './data';
 
 function App() {
   return (

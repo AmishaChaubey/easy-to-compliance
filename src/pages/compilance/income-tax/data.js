@@ -1,102 +1,104 @@
 import { Calendar, FileText, AlertCircle, CheckCircle, ChevronDown, List, BookOpen } from 'lucide-react';
 
-export const taxComplianceData = {
+const taxComplianceData  = {
   heroData: {
-    title: 'Tax Compliance Services',
-    description: 'Comprehensive tax compliance solutions for individuals and businesses. Stay compliant, avoid penalties, and maximize your savings.',
-    backgroundImage: '/banner-img/tax.png',
-    primaryButtonText: 'Get Started',
-    secondaryButtonText: 'Contact Us'
+    title: 'Income Tax Compliance Services',
+    description: 'End-to-end Income Tax compliance solutions for individuals, professionals, and businesses. File accurately, save more, and stay penalty-free.',
+    backgroundImage: '/banner-img/labor.png',
+    primaryButtonText: 'File ITR Now',
+    secondaryButtonText: 'Consult Expert'
   },
 
   bannerData: {
     title: 'Important:',
-    message: 'Delayed filing of your Income Tax Return may lead to penalties, interest, and loss of certain benefits. Ensure timely compliance to stay stress-free!'
+    message: 'Delay in filing your Income Tax Return (ITR) may result in late fees, interest, and loss of certain benefits like carry forward of losses. Ensure timely filing to stay compliant!'
   },
 
   tableOfContents: [
     { id: 'hero', label: 'Overview', icon: BookOpen },
-    { id: 'services', label: 'Services Covered', icon: CheckCircle },
-    { id: 'due-dates', label: 'Due Dates', icon: Calendar },
+    { id: 'services', label: 'Income Tax Services Covered', icon: CheckCircle },
+    { id: 'due-dates', label: 'Important Due Dates', icon: Calendar },
     { id: 'documents', label: 'Documents Required', icon: FileText },
-    { id: 'penalties', label: 'Penalties & Late Fees', icon: AlertCircle },
+    { id: 'penalties', label: 'Penalties & Interest', icon: AlertCircle },
     { id: 'process', label: 'Filing Process', icon: List },
     { id: 'faq', label: 'FAQs', icon: ChevronDown },
   ],
 
   services: [
     {
-      title: 'Income Tax Return Filing',
-      description: 'Complete assistance with ITR filing for individuals and businesses',
-      features: ['Form selection', 'Tax computation', 'Deduction optimization']
-    },
-    {
-      title: 'GST Compliance',
-      description: 'Monthly and quarterly GST return filing services',
-      features: ['GSTR-1', 'GSTR-3B', 'Annual returns']
+      title: 'ITR Filing',
+      description: 'Accurate Income Tax Return filing for salaried individuals, freelancers, and businesses',
+      features: ['Correct ITR form selection', 'Tax computation', 'Deduction & exemption optimization']
     },
     {
       title: 'Tax Planning',
-      description: 'Strategic tax planning to minimize your tax liability',
-      features: ['Investment advisory', 'Tax-saving schemes', 'Year-end planning']
+      description: 'Strategic tax planning to legally minimize your tax liability',
+      features: ['80C/80D planning', 'Capital gains planning', 'Year-end tax review']
     },
     {
-      title: 'Audit Support',
-      description: 'Comprehensive support during tax audits and assessments',
-      features: ['Documentation', 'Representation', 'Compliance review']
+      title: 'Notice Handling',
+      description: 'Professional assistance for Income Tax notices and scrutiny cases',
+      features: ['Notice reply drafting', 'Representation before department', 'Compliance support']
+    },
+    {
+      title: 'Advance Tax & TDS Support',
+      description: 'Computation and timely payment support for advance tax and TDS',
+      features: ['Advance tax calculation', 'TDS review', 'Interest computation']
     }
   ],
 
   dueDates: [
-    { period: 'Q1 (Apr-Jun)', date: 'July 31, 2024', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Q2 (Jul-Sep)', date: 'October 31, 2024', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Q3 (Oct-Dec)', date: 'January 31, 2025', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Annual', date: 'July 31, 2024', type: 'Annual Return', status: 'critical' },
+    { period: 'Individual (Non-Audit)', date: '31st July', type: 'ITR Filing', status: 'critical' },
+    { period: 'Business (Audit Cases)', date: '31st October', type: 'ITR Filing', status: 'important' },
+    { period: 'Belated Return', date: '31st December', type: 'Late Filing', status: 'upcoming' },
+    { period: 'Revised Return', date: '31st December', type: 'Correction Filing', status: 'upcoming' },
   ],
 
   documents: [
-    { category: 'Identity Proof', items: ['PAN Card', 'Aadhaar Card', 'Passport'] },
-    { category: 'Income Proof', items: ['Form 16/16A', 'Salary Slips', 'Bank Statements', 'TDS Certificates'] },
-    { category: 'Investment Proof', items: ['LIC Premium Receipts', 'PPF Statements', 'ELSS Statements', 'Home Loan Certificates'] },
-    { category: 'Business Documents', items: ['P&L Statement', 'Balance Sheet', 'GST Returns', 'Audit Reports'] },
+    { category: 'Identity & Basic Details', items: ['PAN Card', 'Aadhaar Card', 'Bank Account Details'] },
+    { category: 'Income Documents', items: ['Form 16', 'Salary Slips', 'Bank Statements', 'TDS Certificates (Form 16A)'] },
+    { category: 'Investment Proof', items: ['LIC Receipts', 'PPF Statement', 'ELSS Investment Proof', 'Home Loan Interest Certificate'] },
+    { category: 'Other Income Proof', items: ['Capital Gains Statement', 'Rental Income Details', 'Business Financial Statements'] },
   ],
 
   penalties: [
-    { violation: 'Late filing of returns', penalty: '₹5,000', additionalInfo: 'Interest charged at 1% per month' },
-    { violation: 'Non-filing of returns', penalty: '₹10,000', additionalInfo: 'Plus prosecution under Section 276CC' },
-    { violation: 'Delayed tax payment', penalty: '1% per month', additionalInfo: 'On unpaid tax amount' },
-    { violation: 'Incorrect information', penalty: 'Up to ₹50,000', additionalInfo: 'Penalty under Section 270A' },
+    { violation: 'Late filing of ITR', penalty: '₹5,000 (₹1,000 if income below ₹5 lakh)', additionalInfo: 'Under Section 234F' },
+    { violation: 'Late payment of tax', penalty: '1% interest per month', additionalInfo: 'Under Section 234A/234B/234C' },
+    { violation: 'Under-reporting of income', penalty: '50% of tax payable', additionalInfo: 'Under Section 270A' },
+    { violation: 'Misreporting of income', penalty: '200% of tax payable', additionalInfo: 'Serious penalty for false reporting' },
   ],
 
   filingSteps: [
-    { step: 1, title: 'Document Collection', description: 'Gather all necessary documents including Form 16, investment proofs, and bank statements' },
-    { step: 2, title: 'Data Verification', description: 'Our experts verify all information for accuracy and completeness' },
-    { step: 3, title: 'Return Preparation', description: 'Prepare your tax return with optimized deductions and exemptions' },
-    { step: 4, title: 'Review & Approval', description: 'You review the prepared return and provide final approval' },
-    { step: 5, title: 'E-Filing', description: 'Submit your return electronically to the Income Tax Department' },
-    { step: 6, title: 'Verification', description: 'Complete ITR-V verification through Aadhaar OTP or sending signed copy' },
+    { step: 1, title: 'Document Collection', description: 'Collect Form 16, investment proofs, bank statements, and other income details' },
+    { step: 2, title: 'Income Computation', description: 'Compute total income under all heads including salary, business, capital gains, etc.' },
+    { step: 3, title: 'Tax Calculation', description: 'Calculate tax liability after deductions and exemptions' },
+    { step: 4, title: 'Client Review', description: 'Share draft ITR for verification and approval' },
+    { step: 5, title: 'E-Filing of Return', description: 'File the return on the Income Tax e-filing portal' },
+    { step: 6, title: 'ITR Verification', description: 'Verify return via Aadhaar OTP, net banking, or by sending signed ITR-V' },
   ],
 
   faqs: [
     {
-      question: 'What is the last date for filing income tax returns?',
-      answer: 'For individuals (non-audit cases), the due date is July 31st of the assessment year. For businesses requiring audit, the due date is October 31st.'
+      question: 'Who is required to file Income Tax Return?',
+      answer: 'Individuals whose income exceeds the basic exemption limit or who meet certain specified conditions must file an ITR.'
     },
     {
-      question: 'Can I file my return after the due date?',
-      answer: 'Yes, you can file a belated return up to December 31st of the assessment year. However, you will have to pay a late filing fee of ₹5,000 (₹1,000 if income is below ₹5 lakhs).'
+      question: 'What happens if I file ITR after the due date?',
+      answer: 'You will have to pay a late filing fee under Section 234F and interest on any unpaid tax.'
     },
     {
-      question: 'What happens if I miss the deadline completely?',
-      answer: 'If you miss the December 31st deadline, you cannot file a belated return. You may only file if the tax department issues a notice. Additionally, you will lose the ability to carry forward certain losses.'
+      question: 'Can I revise my Income Tax Return?',
+      answer: 'Yes, you can revise your return before 31st December of the assessment year if you discover any mistake.'
     },
     {
-      question: 'How can I track my refund status?',
-      answer: 'You can track your refund status on the Income Tax e-filing portal using your PAN and assessment year. Refunds are typically processed within 4-6 weeks of successful verification.'
+      question: 'How long does it take to get a refund?',
+      answer: 'Refunds are generally processed within 4–6 weeks after successful verification of the return.'
     },
     {
-      question: 'Is it mandatory to link PAN with Aadhaar?',
-      answer: 'Yes, linking PAN with Aadhaar is mandatory. Failure to link may result in your PAN becoming inoperative, affecting all financial transactions.'
+      question: 'Is Aadhaar-PAN linking mandatory?',
+      answer: 'Yes, linking Aadhaar with PAN is mandatory. Failure to do so may make your PAN inoperative.'
     },
   ]
 };
+
+export default taxComplianceData

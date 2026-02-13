@@ -113,14 +113,18 @@ const TaxCompliancePage = ({
       <section
         id="hero"
         className="text-white"
-        style={{
-          backgroundImage: `url("${heroData?.backgroundImage}")`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: 'clamp(320px, 55vw, 520px)',
-          display: 'flex',
-          alignItems: 'center'
-        }}
+    style={{
+  backgroundImage: `
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("${heroData?.backgroundImage}")
+  `,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  minHeight: 'clamp(320px, 55vw, 520px)',
+  display: 'flex',
+  alignItems: 'center'
+}}
+
       >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="max-w-3xl">

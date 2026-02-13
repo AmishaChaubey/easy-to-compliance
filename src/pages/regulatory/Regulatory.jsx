@@ -147,16 +147,18 @@ const Regulatory = () => {
     <div className="min-h-screen bg-white">
       
       {/* Hero Section - Clean & Professional */}
-      <section className="relative w-full bg-[#135192] text-white overflow-hidden">
+      <section className="relative w-full  text-white overflow-hidden">
         
         <div className="absolute inset-0">
           <img 
-            src="/path/to/your/banner-image.jpg" 
+            src={regulatory.hero.image} 
             alt="Banner Background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover "  
+   
           />
-          <div className="absolute inset-0 bg-[#135192]/85"></div>
+          <div className="absolute inset-0 bg-[#000000]/45"></div>
         </div>
+
 
         {/* Subtle geometric pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -189,15 +191,15 @@ const Regulatory = () => {
             <div className="flex flex-col xs:flex-row flex-wrap gap-2.5 xs:gap-3 sm:gap-4 mb-8 xs:mb-10 sm:mb-12 md:mb-16">
             <div className="flex flex-col sm:flex-row  gap-4 mt-6">
   
-  <button className="group w-full sm:w-auto bg-white text-[#135192] px-5 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-bold hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg text-sm xs:text-base">
+ <Link to='/contact'> <button className="group w-full sm:w-auto bg-white text-[#135192] px-5 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-bold hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg text-sm xs:text-base">
     <span>{regulatory.hero.cta}</span>
     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-  </button>
+  </button></Link>
 
-  <button className="w-full sm:w-auto border-2 border-white text-white px-5 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-bold hover:bg-white hover:text-[#135192] transition-all duration-300 flex items-center justify-center gap-2 text-sm xs:text-base">
+  <Link to='/contact'><button className="w-full sm:w-auto border-2 border-white text-white px-5 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-bold hover:bg-white hover:text-[#135192] transition-all duration-300 flex items-center justify-center gap-2 text-sm xs:text-base">
     <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
     <span>Schedule Call</span>
-  </button>
+  </button></Link>
 
 </div>
 

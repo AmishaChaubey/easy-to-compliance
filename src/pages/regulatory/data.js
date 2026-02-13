@@ -13,7 +13,7 @@ export const regulatoryData = {
       title: "FEMA Compliance Services",
       subtitle:
         "Expert assistance for foreign investments, cross-border transactions, and RBI reporting under FEMA regulations.",
-      image: "/banner-img/fema.png",
+      image: "/banner-img/about.png",
       cta: "Get FEMA Consultation"
     },
 

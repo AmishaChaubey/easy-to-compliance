@@ -1,102 +1,127 @@
 import { Calendar, FileText, AlertCircle, CheckCircle, ChevronDown, List, BookOpen } from 'lucide-react';
 
-export const taxComplianceData = {
+const taxComplianceData = {
   heroData: {
-    title: 'Tax Compliance Services',
-    description: 'Comprehensive tax compliance solutions for individuals and businesses. Stay compliant, avoid penalties, and maximize your savings.',
+    title: 'Labour Law Compliance Services',
+    description:
+      'Comprehensive labour law compliance solutions to help businesses comply with employment laws, avoid penalties, and maintain a legally secure workplace.',
     backgroundImage: '/banner-img/labor.png',
-    primaryButtonText: 'Get Started',
-    secondaryButtonText: 'Contact Us'
+    primaryButtonText: 'Ensure Compliance Now',
+    secondaryButtonText: 'Consult Labour Expert'
   },
 
   bannerData: {
     title: 'Important:',
-    message: 'Delayed filing of your Income Tax Return may lead to penalties, interest, and loss of certain benefits. Ensure timely compliance to stay stress-free!'
+    message:
+      'Non-compliance with labour laws can result in penalties, inspections, legal disputes, and business disruptions. Ensure timely registrations, returns, and record maintenance.'
   },
 
   tableOfContents: [
     { id: 'hero', label: 'Overview', icon: BookOpen },
-    { id: 'services', label: 'Services Covered', icon: CheckCircle },
-    { id: 'due-dates', label: 'Due Dates', icon: Calendar },
+    { id: 'services', label: 'Labour Law Services Covered', icon: CheckCircle },
+    { id: 'due-dates', label: 'Important Due Dates', icon: Calendar },
     { id: 'documents', label: 'Documents Required', icon: FileText },
-    { id: 'penalties', label: 'Penalties & Late Fees', icon: AlertCircle },
-    { id: 'process', label: 'Filing Process', icon: List },
-    { id: 'faq', label: 'FAQs', icon: ChevronDown },
+    { id: 'penalties', label: 'Penalties & Consequences', icon: AlertCircle },
+    { id: 'process', label: 'Compliance Process', icon: List },
+    { id: 'faq', label: 'FAQs', icon: ChevronDown }
   ],
 
   services: [
     {
-      title: 'Income Tax Return Filing',
-      description: 'Complete assistance with ITR filing for individuals and businesses',
-      features: ['Form selection', 'Tax computation', 'Deduction optimization']
+      title: 'PF (Provident Fund) Compliance',
+      description: 'Registration, monthly return filing, and compliance under EPF Act',
+      features: ['PF Registration', 'Monthly ECR Filing', 'Challan Generation & Payment']
     },
     {
-      title: 'GST Compliance',
-      description: 'Monthly and quarterly GST return filing services',
-      features: ['GSTR-1', 'GSTR-3B', 'Annual returns']
+      title: 'ESI Compliance',
+      description: 'Registration and return filing under ESI Act',
+      features: ['ESI Registration', 'Half-Yearly Returns', 'Employee Insurance Compliance']
     },
     {
-      title: 'Tax Planning',
-      description: 'Strategic tax planning to minimize your tax liability',
-      features: ['Investment advisory', 'Tax-saving schemes', 'Year-end planning']
+      title: 'Professional Tax Compliance',
+      description: 'Registration and periodic filing of Professional Tax returns',
+      features: ['PT Registration', 'Monthly/Quarterly Returns', 'Payment Compliance']
     },
     {
-      title: 'Audit Support',
-      description: 'Comprehensive support during tax audits and assessments',
-      features: ['Documentation', 'Representation', 'Compliance review']
+      title: 'Labour License & Registers',
+      description: 'Labour license registration and maintenance of statutory registers',
+      features: ['Shop & Establishment Registration', 'Contract Labour License', 'Maintenance of Labour Registers']
     }
   ],
 
   dueDates: [
-    { period: 'Q1 ', date: 'July 31, 2024', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Q2 ', date: 'October 31, 2024', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Q3 ', date: 'January 31, 2025', type: 'Quarterly Return', status: 'upcoming' },
-    { period: 'Annual', date: 'July 31, 2024', type: 'Annual Return', status: 'critical' },
+    { period: 'PF Monthly Return', date: '15th of Next Month', type: 'PF Payment & Filing', status: 'critical' },
+    { period: 'ESI Monthly Contribution', date: '15th of Next Month', type: 'ESI Payment', status: 'critical' },
+    { period: 'Professional Tax Return', date: 'As per State Rules', type: 'PT Filing', status: 'important' },
+    { period: 'Labour Welfare Fund', date: 'As per State Notification', type: 'Annual Contribution', status: 'upcoming' }
   ],
 
   documents: [
-    { category: 'Identity Proof', items: ['PAN Card', 'Aadhaar Card', 'Passport'] },
-    { category: 'Income Proof', items: ['Form 16/16A', 'Salary Slips', 'Bank Statements', 'TDS Certificates'] },
-    { category: 'Investment Proof', items: ['LIC Premium Receipts', 'PPF Statements', 'ELSS Statements', 'Home Loan Certificates'] },
-    { category: 'Business Documents', items: ['P&L Statement', 'Balance Sheet', 'GST Returns', 'Audit Reports'] },
+    { category: 'Business Details', items: ['Certificate of Incorporation / Registration', 'PAN Card', 'Address Proof of Business'] },
+    { category: 'Employee Details', items: ['Employee Aadhaar', 'PAN Card', 'Salary Structure Details', 'Joining Date Records'] },
+    { category: 'Payroll Records', items: ['Salary Register', 'Attendance Register', 'Wage Sheet'] },
+    { category: 'Compliance Records', items: ['Previous PF/ESI Returns', 'Challan Copies', 'Labour Inspection Reports'] }
   ],
 
   penalties: [
-    { violation: 'Late filing of returns', penalty: '₹5,000', additionalInfo: 'Interest charged at 1% per month' },
-    { violation: 'Non-filing of returns', penalty: '₹10,000', additionalInfo: 'Plus prosecution under Section 276CC' },
-    { violation: 'Delayed tax payment', penalty: '1% per month', additionalInfo: 'On unpaid tax amount' },
-    { violation: 'Incorrect information', penalty: 'Up to ₹50,000', additionalInfo: 'Penalty under Section 270A' },
+    {
+      violation: 'Late PF payment',
+      penalty: 'Interest + Damages',
+      additionalInfo: 'As per EPF Act provisions'
+    },
+    {
+      violation: 'Non-registration under ESI/PF',
+      penalty: 'Heavy fines and prosecution',
+      additionalInfo: 'Legal action may be initiated'
+    },
+    {
+      violation: 'Non-maintenance of registers',
+      penalty: 'Penalty during labour inspection',
+      additionalInfo: 'May result in compliance notice'
+    },
+    {
+      violation: 'Delay in Professional Tax payment',
+      penalty: 'Interest & Late Fees',
+      additionalInfo: 'As per State Government rules'
+    }
   ],
 
   filingSteps: [
-    { step: 1, title: 'Document Collection', description: 'Gather all necessary documents including Form 16, investment proofs, and bank statements' },
-    { step: 2, title: 'Data Verification', description: 'Our experts verify all information for accuracy and completeness' },
-    { step: 3, title: 'Return Preparation', description: 'Prepare your tax return with optimized deductions and exemptions' },
-    { step: 4, title: 'Review & Approval', description: 'You review the prepared return and provide final approval' },
-    { step: 5, title: 'E-Filing', description: 'Submit your return electronically to the Income Tax Department' },
-    { step: 6, title: 'Verification', description: 'Complete ITR-V verification through Aadhaar OTP or sending signed copy' },
+    { step: 1, title: 'Registration Review', description: 'Verify required labour law registrations based on employee strength and business type' },
+    { step: 2, title: 'Data Collection', description: 'Collect employee details, salary structure, and attendance records' },
+    { step: 3, title: 'Return Preparation', description: 'Prepare monthly/periodic returns under PF, ESI, PT, and other applicable laws' },
+    { step: 4, title: 'Client Approval', description: 'Share working and challans for confirmation before payment' },
+    { step: 5, title: 'Online Filing & Payment', description: 'File returns and generate challans on respective portals' },
+    { step: 6, title: 'Record Maintenance', description: 'Maintain statutory registers and compliance documentation for inspection readiness' }
   ],
 
   faqs: [
     {
-      question: 'What is the last date for filing income tax returns?',
-      answer: 'For individuals (non-audit cases), the due date is July 31st of the assessment year. For businesses requiring audit, the due date is October 31st.'
+      question: 'Is PF registration mandatory for all businesses?',
+      answer:
+        'PF registration is mandatory for establishments employing 20 or more employees, subject to applicable rules.'
     },
     {
-      question: 'Can I file my return after the due date?',
-      answer: 'Yes, you can file a belated return up to December 31st of the assessment year. However, you will have to pay a late filing fee of ₹5,000 (₹1,000 if income is below ₹5 lakhs).'
+      question: 'Who is covered under ESI?',
+      answer:
+        'Employees earning wages up to the prescribed limit (currently ₹21,000 per month) are covered under ESI.'
     },
     {
-      question: 'What happens if I miss the deadline completely?',
-      answer: 'If you miss the December 31st deadline, you cannot file a belated return. You may only file if the tax department issues a notice. Additionally, you will lose the ability to carry forward certain losses.'
+      question: 'What happens during a labour inspection?',
+      answer:
+        'Inspectors verify statutory registers, payment records, and compliance filings. Non-compliance may lead to penalties.'
     },
     {
-      question: 'How can I track my refund status?',
-      answer: 'You can track your refund status on the Income Tax e-filing portal using your PAN and assessment year. Refunds are typically processed within 4-6 weeks of successful verification.'
+      question: 'Is Professional Tax applicable in all states?',
+      answer:
+        'Professional Tax is state-specific and applicable only in states where it is notified.'
     },
     {
-      question: 'Is it mandatory to link PAN with Aadhaar?',
-      answer: 'Yes, linking PAN with Aadhaar is mandatory. Failure to link may result in your PAN becoming inoperative, affecting all financial transactions.'
-    },
+      question: 'Why is labour law compliance important?',
+      answer:
+        'Proper compliance protects businesses from legal disputes, penalties, and ensures employee welfare and statutory protection.'
+    }
   ]
 };
+
+export default taxComplianceData;
