@@ -56,7 +56,7 @@ const BlogFrontend = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/blog-img/blog-banner1.png)',
+            backgroundImage: 'url(/banner-img/blog.png)',
           }}
         ></div>
         <div className="absolute inset-0 bg-black/30"></div>
