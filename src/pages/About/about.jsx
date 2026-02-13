@@ -287,7 +287,7 @@ export default function AboutPage() {
       `}</style>
 
       {/* ── Hero ── */}
-      <div className="relative overflow-hidden" style={{ backgroundImage: 'url("/banner.png")' }}>
+      <div className="relative overflow-hidden" style={{ backgroundImage: 'url("/banner-img/about.png")' }}>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-20 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-64 h-64 bg-blue-300 rounded-full blur-3xl"></div>

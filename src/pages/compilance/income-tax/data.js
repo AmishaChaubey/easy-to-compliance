@@ -4,7 +4,7 @@ export const taxComplianceData = {
   heroData: {
     title: 'Tax Compliance Services',
     description: 'Comprehensive tax compliance solutions for individuals and businesses. Stay compliant, avoid penalties, and maximize your savings.',
-    backgroundImage: '/banner.png',
+    backgroundImage: '/banner-img/tax.png',
     primaryButtonText: 'Get Started',
     secondaryButtonText: 'Contact Us'
   },

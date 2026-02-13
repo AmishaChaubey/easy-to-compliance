@@ -13,7 +13,7 @@ export const regulatoryData = {
       title: "FEMA Compliance Services",
       subtitle:
         "Expert assistance for foreign investments, cross-border transactions, and RBI reporting under FEMA regulations.",
-      image: "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg",
+      image: "/banner-img/fema.png",
       cta: "Get FEMA Consultation"
     },
 
@@ -493,7 +493,7 @@ export const regulatoryData = {
       title: "RBI Regulatory Compliance Services",
       subtitle:
         "Professional assistance for businesses and NBFCs to meet RBI regulatory requirements.",
-      image: "https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg",
+      image: "/banner-img/rbi.png",
       cta: "Get RBI Support"
     },
 
@@ -1175,7 +1175,7 @@ export const regulatoryData = {
       title: "SEBI Compliance Services",
       subtitle:
         "Ensuring listed companies and intermediaries comply with SEBI regulations.",
-      image: "https://images.pexels.com/photos/6863256/pexels-photo-6863256.jpeg",
+      image: "/banner-img/sebi.png",
       cta: "Get SEBI Assistance"
     },
 
@@ -1617,7 +1617,7 @@ export const regulatoryData = {
       title: "MCA & ROC Compliance Services",
       subtitle:
         "End-to-end compliance under Companies Act and Ministry of Corporate Affairs.",
-      image: "https://images.pexels.com/photos/4386367/pexels-photo-4386367.jpeg",
+      image: "/banner-img/mca.png",
       cta: "Get MCA Support"
     },
 

@@ -11,7 +11,7 @@ export const servicesData = {
     hero: {
       title: "Professional Accounting Services",
       subtitle: "Accurate, timely, and compliant accounting solutions for your business growth",
-      image: "https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg",
+      image: "/banner-img/accounting.png",
       cta: "Get Started Today"
     },
     about: {
@@ -104,7 +104,7 @@ export const servicesData = {
     hero: {
       title: "Comprehensive Audit Services",
       subtitle: "Independent, thorough, and professional audit services you can trust",
-      image: "https://images.pexels.com/photos/6863332/pexels-photo-6863332.jpeg",
+      image: "/banner-img/audit.png",
       cta: "Request Audit Quote"
     },
     about: {
@@ -196,7 +196,7 @@ export const servicesData = {
     hero: {
       title: "Strategic Business Consulting",
       subtitle: "Expert guidance to optimize your business finances and accelerate growth",
-      image: "https://images.pexels.com/photos/6863244/pexels-photo-6863244.jpeg",
+      image: "/banner-img/consulting.png",
       cta: "Book Consultation"
     },
     about: {
@@ -288,7 +288,7 @@ export const servicesData = {
     hero: {
       title: "Hassle-Free Payroll Management",
       subtitle: "Accurate, timely, and compliant payroll processing for your peace of mind",
-      image: "https://images.pexels.com/photos/8970290/pexels-photo-8970290.jpeg",
+      image: "/banner-img/payroll.png",
       cta: "Start Payroll Service"
     },
     about: {
