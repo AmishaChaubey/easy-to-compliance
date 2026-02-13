@@ -159,13 +159,13 @@ const ServicePage = () => {
       
       {/* Hero Section */}
       <section
-        className="relative w-full min-h-[500px] sm:min-h-[600px] lg:min-h-[200px] flex items-center text-white bg-cover bg-center"
+        className="relative w-full min-h-[500px] sm:min-h-[600px] lg:min-h-[550px] flex items-center text-white bg-cover bg-center"
         style={{
           backgroundImage: `url(${service.hero.image})`
         }}
       >
         {/* Overlay */}
-        {/* <div className="absolute inset-0 bg-[#135192]/80"></div> */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16">
