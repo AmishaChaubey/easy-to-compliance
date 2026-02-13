@@ -827,6 +827,240 @@ export const regulatoryData = {
       ]
     },
 
+    complianceCalendar: {
+      title: "RBI Compliance Calendar",
+      description: "Never miss critical RBI deadlines with our comprehensive calendar",
+      deadlines: [
+        {
+          period: "Monthly",
+          filings: [
+            { form: "NBS-1/NBS-7", description: "Monthly statement of position for NBFCs", dueDate: "15th of following month" },
+            { form: "ALM Statement", description: "Asset-Liability Management return", dueDate: "15th of following month" },
+            { form: "CTR Filing", description: "Cash Transaction Report", dueDate: "15th of following month" }
+          ]
+        },
+        {
+          period: "Quarterly",
+          filings: [
+            { form: "NBS-2/NBS-8", description: "Prudential norms return for NBFCs", dueDate: "30 days after quarter end" },
+            { form: "NBS-3", description: "Certificate of compliance (deposit-taking NBFCs)", dueDate: "30 days after quarter end" },
+            { form: "Fraud Reporting", description: "Fraud incidents and prevention report", dueDate: "15 days after quarter end" }
+          ]
+        },
+        {
+          period: "Annual",
+          filings: [
+            { form: "NBS-9", description: "Annual statement of capital funds", dueDate: "30th June" },
+            { form: "Statutory Audit Report", description: "Annual audited financials with auditor's report", dueDate: "As per AGM timeline" },
+            { form: "Compliance Certificate", description: "Annual statutory compliance certificate", dueDate: "30th June" }
+          ]
+        },
+        {
+          period: "Event-Based",
+          filings: [
+            { form: "STR", description: "Suspicious Transaction Report", dueDate: "Within 7 days of suspicion" },
+            { form: "Change in Management", description: "Intimation of director/CEO changes", dueDate: "Within 15 days of change" },
+            { form: "Material Changes", description: "Reporting of material operational changes", dueDate: "Immediate intimation" }
+          ]
+        }
+      ]
+    },
+
+    industryGuidance: {
+      title: "Sector-Specific RBI Compliance",
+      description: "Tailored compliance solutions across financial service segments",
+      sectors: [
+        {
+          name: "Microfinance Institutions",
+          challenges: [
+            "Fair practices code implementation",
+            "Interest rate cap compliance",
+            "Over-indebtedness prevention",
+            "Household income assessment requirements"
+          ],
+          solutions: [
+            "Automated interest rate monitoring",
+            "Credit bureau integration for indebtedness check",
+            "Field officer training programs",
+            "Responsible lending framework implementation"
+          ]
+        },
+        {
+          name: "Fintech & Payment Companies",
+          challenges: [
+            "PA-PG authorization requirements",
+            "Data localization mandates",
+            "Customer grievance redressal timelines",
+            "Cybersecurity and system audit compliance"
+          ],
+          solutions: [
+            "RBI authorization application support",
+            "Data infrastructure advisory",
+            "Grievance management system setup",
+            "IS audit and cybersecurity framework"
+          ]
+        },
+        {
+          name: "Housing Finance Companies",
+          challenges: [
+            "Priority sector classification",
+            "LTV ratio compliance for different property types",
+            "Fair practices in lending",
+            "Asset classification specific to housing loans"
+          ],
+          solutions: [
+            "Loan categorization frameworks",
+            "LTV monitoring systems",
+            "Customer communication protocols",
+            "Specialized NPA management"
+          ]
+        },
+        {
+          name: "Gold Loan NBFCs",
+          challenges: [
+            "LTV ratio limits (75% for gold loans)",
+            "Valuation and appraisal standards",
+            "Auction procedures for unredeemed pledges",
+            "Storage and security requirements"
+          ],
+          solutions: [
+            "Automated LTV calculation and monitoring",
+            "Standardized valuation processes",
+            "Compliant auction frameworks",
+            "Vault management and insurance advisory"
+          ]
+        },
+        {
+          name: "Equipment Finance NBFCs",
+          challenges: [
+            "Asset classification for lease and hire purchase",
+            "Repossession and recovery procedures",
+            "Concentration risk management",
+            "End-use monitoring of financed equipment"
+          ],
+          solutions: [
+            "Lease accounting compliance",
+            "Recovery SOP development",
+            "Sector exposure tracking",
+            "Collateral monitoring systems"
+          ]
+        },
+        {
+          name: "Peer-to-Peer Lending Platforms",
+          challenges: [
+            "NBFC-P2P registration and compliance",
+            "Exposure limits (₹50,000 per lender across all platforms)",
+            "Escrow account management",
+            "Recovery agent regulations"
+          ],
+          solutions: [
+            "Platform registration assistance",
+            "Automated exposure limit monitoring",
+            "Escrow mechanism implementation",
+            "Fair recovery practices framework"
+          ]
+        }
+      ]
+    },
+
+    caseStudies: {
+      title: "RBI Compliance Success Stories",
+      description: "Real-world transformations we've enabled",
+      studies: [
+        {
+          title: "NBFC Registration - From Application to Approval",
+          industry: "Fintech Lending",
+          challenge: "A fintech startup providing digital lending solutions needed NBFC-ICC registration to scale operations. The founders had limited understanding of RBI requirements and faced complexity in documentation and compliance frameworks.",
+          solution: "We handled end-to-end registration including business plan preparation, financial projections, NOF certification, and RBI application. Post-registration, we established complete compliance infrastructure including NPA recognition systems, ALM framework, and periodic return filing mechanisms.",
+          outcome: "NBFC registration certificate obtained within 8 months. Compliance framework established for sustainable operations with zero regulatory gaps.",
+          impact: "Enabled company to raise ₹100 crore in debt funding, scaled lending book from ₹10 crore to ₹500 crore in 2 years"
+        },
+        {
+          title: "Payment Aggregator Authorization - Fintech Success",
+          industry: "Digital Payments",
+          challenge: "An existing payment gateway company needed to transition to PA-PG authorization regime. The company had net worth shortfall and needed restructuring to meet RBI's stringent requirements.",
+          solution: "Facilitated capital infusion planning to meet net worth requirements, restructured technology infrastructure for data localization, established grievance redressal mechanism, and prepared comprehensive application with business continuity plans.",
+          outcome: "Successfully obtained PA authorization within RBI timelines. Zero business disruption during transition period.",
+          impact: "Preserved ₹800 crore annual processing volume, maintained 5000+ merchant relationships"
+        },
+        {
+          title: "KYC Compliance Overhaul - Avoided Penalties",
+          industry: "Microfinance",
+          challenge: "An MFI with 50,000+ customers faced RBI inspection highlighting serious KYC deficiencies including incomplete documentation, lack of risk categorization, and missing beneficial ownership verification.",
+          solution: "Conducted comprehensive KYC audit of entire customer base, implemented digital KYC collection system, trained 200+ field officers, established centralized KYC review team, and developed real-time compliance dashboards.",
+          outcome: "Remediated 95% of KYC gaps within 6 months. Passed RBI follow-up inspection with zero major observations.",
+          impact: "Avoided potential penalty of ₹2+ crore, restored regulatory standing, prevented license suspension"
+        },
+        {
+          title: "NPA Management - Turnaround Story",
+          industry: "Vehicle Finance NBFC",
+          challenge: "NBFC had gross NPA of 8.2% due to incorrect asset classification, delayed recognition, and inadequate provisioning. The company faced capital adequacy concerns and regulatory scrutiny.",
+          solution: "Implemented automated NPA tracking integrated with collection systems, restructured portfolio with proper documentation, established early warning indicators for asset quality, and created provisioning buffer for stressed accounts.",
+          outcome: "Reduced gross NPA to 4.1% within 18 months. Improved CRAR from 14.8% to 18.5%.",
+          impact: "Restored investor confidence, reduced cost of borrowing by 150 bps, expanded lending capacity"
+        }
+      ]
+    },
+
+    resources: {
+      title: "RBI Compliance Resources",
+      description: "Essential tools and knowledge base for regulatory compliance",
+      tools: [
+        {
+          name: "NBFC Compliance Checklist",
+          description: "Comprehensive checklist covering all NBFC compliance requirements",
+          type: "Excel Template"
+        },
+        {
+          name: "KYC Document Requirements Matrix",
+          description: "Quick reference for KYC documents across customer categories",
+          type: "PDF Guide"
+        },
+        {
+          name: "NPA Classification Calculator",
+          description: "Tool for determining asset classification and provisioning requirements",
+          type: "Interactive Tool"
+        },
+        {
+          name: "RBI Return Filing Calendar",
+          description: "Automated reminder system for all periodic returns",
+          type: "Calendar Integration"
+        },
+        {
+          name: "Capital Adequacy Calculator",
+          description: "CRAR computation tool with risk weight automation",
+          type: "Excel Model"
+        },
+        {
+          name: "RBI Circular Digest",
+          description: "Monthly summary of important RBI circulars and updates",
+          type: "Newsletter"
+        }
+      ],
+      guides: [
+        {
+          title: "NBFC Registration: Step-by-Step Guide",
+          topics: ["Eligibility criteria", "Documentation requirements", "Application process", "Post-registration compliance"],
+          readTime: "20 min"
+        },
+        {
+          title: "KYC & AML Compliance Handbook",
+          topics: ["Customer identification", "Risk categorization", "Suspicious transaction reporting", "Record keeping"],
+          readTime: "25 min"
+        },
+        {
+          title: "Payment Aggregator Authorization Guide",
+          topics: ["Eligibility and net worth", "Technology requirements", "Application process", "Ongoing compliance"],
+          readTime: "18 min"
+        },
+        {
+          title: "Asset Classification & Provisioning",
+          topics: ["NPA recognition norms", "Asset categories", "Provisioning requirements", "Restructuring guidelines"],
+          readTime: "15 min"
+        }
+      ]
+    },
+
     detailedFeatures: [
       {
         icon: "🏛️",
@@ -901,6 +1135,21 @@ export const regulatoryData = {
         question: "Do payment aggregators need RBI license?",
         answer:
           "Yes, all payment aggregators must obtain authorization from RBI. Existing PAs were required to apply by June 30, 2021. New applicants need minimum net worth of ₹15 crore at application and ₹25 crore by March 2026."
+      },
+      {
+        question: "What is CRAR and what is the minimum requirement?",
+        answer:
+          "CRAR (Capital to Risk-weighted Assets Ratio) measures capital adequacy of NBFCs. RBI mandates minimum CRAR of 15% for all NBFCs. This ensures the entity has sufficient capital buffer to absorb potential losses."
+      },
+      {
+        question: "When is an asset classified as NPA?",
+        answer:
+          "As per RBI norms, an asset is classified as Non-Performing Asset (NPA) if interest or principal remains overdue for a period of 90 days. However, for certain categories like agricultural loans, different norms may apply."
+      },
+      {
+        question: "What are the different categories of NBFCs?",
+        answer:
+          "Main categories include: NBFC-Investment and Credit Company (ICC), NBFC-Infrastructure Finance Company (IFC), NBFC-Microfinance Institution (MFI), NBFC-Factors, NBFC-Account Aggregator, and NBFC-Peer to Peer Lending Platform. Each has specific regulations and minimum capital requirements."
       }
     ],
 
@@ -942,7 +1191,6 @@ export const regulatoryData = {
       ]
     },
 
-    // NEW sections for SEBI
     regulatoryOverview: {
       title: "SEBI Regulatory Framework",
       introduction: "The Securities and Exchange Board of India (SEBI) regulates the securities market to protect investor interests and promote development of the securities market. SEBI compliance is mandatory for listed companies, market intermediaries, and entities dealing in securities.",
@@ -970,7 +1218,297 @@ export const regulatoryData = {
       ]
     },
 
-    // Continue with more SEBI sections...
+    complianceCalendar: {
+      title: "SEBI Compliance Calendar",
+      description: "Stay on track with critical SEBI compliance deadlines for listed companies",
+      deadlines: [
+        {
+          period: "Quarterly",
+          filings: [
+            { form: "Financial Results", description: "Standalone and consolidated quarterly results", dueDate: "45 days from quarter end" },
+            { form: "Corporate Governance Report", description: "Compliance report on governance norms", dueDate: "21 days from quarter end" },
+            { form: "Shareholding Pattern", description: "Report on shareholding distribution", dueDate: "21 days from quarter end" },
+            { form: "Statement of Investor Complaints", description: "Complaints received and resolved", dueDate: "21 days from quarter end" }
+          ]
+        },
+        {
+          period: "Half-Yearly",
+          filings: [
+            { form: "Related Party Transactions", description: "Disclosure of RPTs on consolidated basis", dueDate: "Within 15 days of publication of results" },
+            { form: "Compliance Certificate", description: "Certificate on share transfer compliance", dueDate: "Within 30 days of half year" }
+          ]
+        },
+        {
+          period: "Annual",
+          filings: [
+            { form: "Annual Report", description: "Complete annual report with financials", dueDate: "21 days before AGM" },
+            { form: "Annual Secretarial Compliance Report", description: "Report on all applicable compliances", dueDate: "Within 60 days of FY end" },
+            { form: "CEO/CFO Certification", description: "Certification on financial statements", dueDate: "Before board approval of results" },
+            { form: "Business Responsibility Report", description: "For top 1000 listed entities", dueDate: "With annual report" }
+          ]
+        },
+        {
+          period: "Event-Based",
+          filings: [
+            { form: "Material Events", description: "Immediate disclosure of material events", dueDate: "Within 24 hours of event" },
+            { form: "Board Meeting Intimation", description: "Notice of board meeting", dueDate: "At least 5 days in advance" },
+            { form: "Outcome of Board Meeting", description: "Decisions taken in board meeting", dueDate: "Within 30 minutes of meeting conclusion" }
+          ]
+        }
+      ]
+    },
+
+    industryGuidance: {
+      title: "Sector-Specific SEBI Compliance",
+      description: "Specialized compliance solutions for different market segments",
+      sectors: [
+        {
+          name: "IT & Software Companies",
+          challenges: [
+            "Revenue recognition compliance under Ind AS",
+            "Disclosure of client concentration risks",
+            "Employee stock option (ESOP) accounting",
+            "Segment reporting for diverse service lines"
+          ],
+          solutions: [
+            "Quarterly revenue audit and certification",
+            "Risk disclosure framework implementation",
+            "ESOP valuation and disclosure support",
+            "Segment-wise financial reporting systems"
+          ]
+        },
+        {
+          name: "Banking & Financial Services",
+          challenges: [
+            "Dual regulation under RBI and SEBI",
+            "NPA disclosure requirements",
+            "Capital adequacy reporting",
+            "Related party transactions with group entities"
+          ],
+          solutions: [
+            "Coordinated RBI-SEBI compliance calendar",
+            "Asset quality review and disclosure",
+            "Basel III compliance reporting",
+            "RPT approval and disclosure framework"
+          ]
+        },
+        {
+          name: "Pharmaceuticals",
+          challenges: [
+            "R&D expense capitalization disclosures",
+            "Product approval impact on stock price",
+            "USFDA inspection outcomes disclosure",
+            "Patent litigation material events"
+          ],
+          solutions: [
+            "R&D accounting policy formulation",
+            "Timely material event disclosure protocols",
+            "Regulatory inspection disclosure framework",
+            "Litigation tracking and reporting"
+          ]
+        },
+        {
+          name: "Real Estate & Infrastructure",
+          challenges: [
+            "Project-wise revenue recognition",
+            "Land bank disclosure requirements",
+            "Construction progress reporting",
+            "Joint venture and SPV disclosures"
+          ],
+          solutions: [
+            "Project accounting systems",
+            "Asset disclosure frameworks",
+            "Progress monitoring and reporting",
+            "Consolidated financial statement preparation"
+          ]
+        },
+        {
+          name: "Manufacturing & Automotive",
+          challenges: [
+            "Inventory valuation disclosures",
+            "Raw material price fluctuation impacts",
+            "Plant closure or expansion announcements",
+            "Supply chain disruption disclosures"
+          ],
+          solutions: [
+            "Inventory accounting policy compliance",
+            "Commodity hedging disclosure support",
+            "Material event identification protocols",
+            "Business continuity disclosure frameworks"
+          ]
+        },
+        {
+          name: "E-commerce & Retail",
+          challenges: [
+            "Customer acquisition cost disclosures",
+            "Platform vs inventory model distinction",
+            "Marketplace transaction reporting",
+            "Festive season impact materiality"
+          ],
+          solutions: [
+            "Business model disclosure frameworks",
+            "Revenue stream clarification",
+            "Segment reporting implementation",
+            "Seasonality disclosure protocols"
+          ]
+        }
+      ]
+    },
+
+    violations: {
+      title: "Common SEBI Violations & Enforcement",
+      description: "Understanding regulatory risks and maintaining compliance discipline",
+      commonViolations: [
+        {
+          violation: "Delayed Financial Results",
+          impact: "Critical",
+          penalty: "Fine of ₹5,000 per day for listed entity and ₹1,000 per day for CEO/CFO, suspension of trading",
+          prevention: "Robust quarter-end closing process, audit coordination, pre-closure reviews"
+        },
+        {
+          violation: "Non-disclosure of Material Events",
+          impact: "Critical",
+          penalty: "Penalty up to ₹25 crore or 3 times profit, debarment of directors",
+          prevention: "Material event identification framework, compliance officer training, disclosure protocols"
+        },
+        {
+          violation: "Insider Trading",
+          impact: "Critical",
+          penalty: "Penalty up to ₹25 crore or 3 times profit, imprisonment up to 10 years",
+          prevention: "Strict code of conduct, trading window enforcement, UPSI handling protocols"
+        },
+        {
+          violation: "Corporate Governance Violations",
+          impact: "High",
+          penalty: "Fine up to ₹1 lakh per day, replacement of non-compliant directors",
+          prevention: "Board composition monitoring, committee compliance tracking, independence verification"
+        },
+        {
+          violation: "Inadequate Related Party Disclosures",
+          impact: "High",
+          penalty: "Monetary penalties, restatement of financials, audit committee penalties",
+          prevention: "RPT policy implementation, materiality threshold monitoring, quarterly RPT reviews"
+        },
+        {
+          violation: "Non-compliance with Shareholding Pattern",
+          impact: "Medium",
+          penalty: "Fine up to ₹1 lakh per day of delay",
+          prevention: "Automated reconciliation systems, depository linkage, timely data collection"
+        }
+      ],
+      enforcementMechanism: {
+        title: "SEBI Enforcement Process",
+        steps: [
+          "Surveillance and market monitoring",
+          "Preliminary inquiry and investigation",
+          "Show cause notice issuance",
+          "Reply and personal hearing",
+          "Adjudication order",
+          "Recovery proceedings or appeals"
+        ],
+        timeline: "6 months to 2 years depending on complexity",
+        consequences: ["Monetary penalties", "Disgorgement of profits", "Debarment from markets", "Director disqualification", "Criminal prosecution"]
+      }
+    },
+
+    caseStudies: {
+      title: "SEBI Compliance Success Stories",
+      description: "How we've helped companies navigate complex regulatory challenges",
+      studies: [
+        {
+          title: "Tech Unicorn IPO - Complete Listing Compliance Setup",
+          industry: "Technology",
+          challenge: "A tech unicorn preparing for IPO needed to establish comprehensive SEBI compliance infrastructure from scratch. The company had complex ESOP structures, multiple share classes, and international subsidiaries requiring consolidated reporting.",
+          solution: "We established complete governance framework including board committees, insider trading code, RPT policy, and disclosure procedures. Implemented automated compliance tracking systems and trained management on LODR obligations.",
+          outcome: "Successful IPO listing with zero compliance deficiencies. All pre-IPO disclosures completed on time, enabling smooth regulatory approvals.",
+          impact: "₹5,000 crore IPO completed successfully, robust compliance culture established for ongoing operations"
+        },
+        {
+          title: "Banking Major - Material Event Disclosure Framework",
+          industry: "Financial Services",
+          challenge: "A large private sector bank faced scrutiny for delayed disclosure of NPA provisioning requirements. SEBI initiated inquiry for potential material event non-disclosure.",
+          solution: "We developed a comprehensive material event identification matrix, established cross-functional disclosure committee, and implemented real-time monitoring dashboards for potential material events.",
+          outcome: "Successfully represented the bank before SEBI, demonstrated adequate processes going forward, avoided major penalties.",
+          impact: "Reduced disclosure timeline from 48 hours to 6 hours, prevented potential penalty of ₹10+ crore"
+        },
+        {
+          title: "Pharma Company - Insider Trading Code Implementation",
+          industry: "Pharmaceuticals",
+          challenge: "Post a major insider trading allegation against a key executive, the company needed to overhaul its insider trading prevention mechanisms and restore investor confidence.",
+          solution: "Implemented digital pre-clearance platform, structured trading window calendar aligned with results disclosure, established designated persons list with automated monitoring, and conducted company-wide UPSI handling training.",
+          outcome: "Zero insider trading violations in 3 years post-implementation, successful SEBI audit clearance.",
+          impact: "Restored investor confidence, stock price recovered 40% within 6 months of framework implementation"
+        },
+        {
+          title: "Infrastructure Conglomerate - Related Party Transaction Compliance",
+          industry: "Infrastructure",
+          challenge: "A diversified infrastructure group with 200+ entities faced challenges in identifying and disclosing related party transactions across group companies, leading to compliance gaps.",
+          solution: "Developed automated RPT tracking system integrating with accounting software, established materiality thresholds, implemented quarterly RPT review process with audit committee, and created consolidated RPT disclosure framework.",
+          outcome: "100% RPT identification and disclosure, audit qualifications removed, improved governance ratings.",
+          impact: "Enhanced ESG scores by 25 points, avoided potential restatement of 3 years of financials"
+        }
+      ]
+    },
+
+    resources: {
+      title: "SEBI Compliance Resources",
+      description: "Comprehensive tools and guides for maintaining regulatory compliance",
+      tools: [
+        {
+          name: "LODR Compliance Checklist",
+          description: "Complete checklist covering all Listing Obligations and Disclosure Requirements",
+          type: "Interactive PDF"
+        },
+        {
+          name: "Material Event Assessment Tool",
+          description: "Decision tree for determining materiality and disclosure requirements",
+          type: "Excel Tool"
+        },
+        {
+          name: "Corporate Governance Scorecard",
+          description: "Self-assessment tool for evaluating governance compliance",
+          type: "Dashboard"
+        },
+        {
+          name: "Insider Trading Code Template",
+          description: "Ready-to-use code of conduct for insider trading prevention",
+          type: "Word Template"
+        },
+        {
+          name: "RPT Policy Generator",
+          description: "Customizable related party transaction policy framework",
+          type: "Document Template"
+        },
+        {
+          name: "SEBI Circular Tracker",
+          description: "Real-time updates on new SEBI regulations and amendments",
+          type: "Email Alert System"
+        }
+      ],
+      guides: [
+        {
+          title: "Complete Guide to LODR Compliance",
+          topics: ["Quarterly disclosures", "Annual reporting", "Material events", "Corporate actions"],
+          readTime: "25 min"
+        },
+        {
+          title: "Insider Trading Prevention Handbook",
+          topics: ["UPSI definition", "Trading windows", "Pre-clearance procedures", "Disclosure requirements"],
+          readTime: "18 min"
+        },
+        {
+          title: "Corporate Governance Best Practices",
+          topics: ["Board composition", "Committee formation", "Independent directors", "Performance evaluation"],
+          readTime: "22 min"
+        },
+        {
+          title: "IPO Compliance Roadmap",
+          topics: ["Pre-IPO preparations", "Offer document", "Listing process", "Post-listing obligations"],
+          readTime: "30 min"
+        }
+      ]
+    },
+
     detailedFeatures: [
       {
         icon: "📈",
@@ -1019,6 +1557,41 @@ export const regulatoryData = {
         question: "Who needs SEBI compliance?",
         answer:
           "Listed companies, stock brokers, mutual funds, and other market intermediaries must comply with SEBI regulations."
+      },
+      {
+        question: "What is LODR and who does it apply to?",
+        answer:
+          "LODR (Listing Obligations and Disclosure Requirements) Regulations, 2015 apply to all companies whose securities are listed on recognized stock exchanges in India. It mandates continuous disclosures, corporate governance norms, and investor protection measures."
+      },
+      {
+        question: "What is considered a material event under SEBI regulations?",
+        answer:
+          "Material events are those which may have a bearing on the performance/operations of the listed entity or price-sensitive information. Examples include: major contracts, mergers & acquisitions, changes in key management, regulatory actions, credit rating changes, and significant financial events. These must be disclosed within 24 hours."
+      },
+      {
+        question: "What are the requirements for independent directors?",
+        answer:
+          "Listed companies must have at least one-third of the board as independent directors (half for companies where chairman is executive/promoter). Independent directors must meet independence criteria, serve maximum 2 consecutive terms of 5 years each, and cannot hold more than 7 listed company directorships (3 if MD/WTD elsewhere)."
+      },
+      {
+        question: "How does the insider trading code work?",
+        answer:
+          "Companies must frame an insider trading code covering: identification of insiders and connected persons, trading window closure periods (typically before financial results), pre-clearance requirements for trades above threshold, and disclosure of holdings. Designated persons must disclose their trades and cannot trade during closure periods."
+      },
+      {
+        question: "What are related party transactions (RPT) and how are they regulated?",
+        answer:
+          "RPTs are transactions between the company and its related parties (promoters, directors, key management, group companies). Material RPTs require prior shareholder approval. All RPTs must be at arm's length and in ordinary course of business. Quarterly disclosure and audit committee approval is mandatory."
+      },
+      {
+        question: "What is the timeline for filing quarterly results?",
+        answer:
+          "Listed companies must file quarterly financial results within 45 days from end of quarter. For companies with listed debt securities only, the timeline is 45 days for Q1, Q2, Q3 and 60 days for Q4. Results must be accompanied by limited review report by auditors."
+      },
+      {
+        question: "What is the penalty for delayed disclosure of financial results?",
+        answer:
+          "Listed entity is liable to pay fine of ₹5,000 per day of delay, and each director/officer in default faces ₹1,000 per day. Additionally, stock exchange may suspend trading in securities. Persistent delays can lead to delisting proceedings and further regulatory action."
       }
     ],
 
@@ -1060,7 +1633,6 @@ export const regulatoryData = {
       ]
     },
 
-    // NEW sections for MCA
     regulatoryOverview: {
       title: "Companies Act Framework",
       introduction: "The Companies Act, 2013 provides a comprehensive framework for incorporation, management, and dissolution of companies in India. MCA (Ministry of Corporate Affairs) is the regulatory body overseeing compliance.",
@@ -1084,6 +1656,304 @@ export const regulatoryData = {
           title: "Director Duties & Liabilities",
           description: "Responsibilities of directors including fiduciary duties, disclosure obligations, and liability provisions.",
           regulations: ["Conflict of interest", "Related party transactions", "Board report", "Director appointments"]
+        }
+      ]
+    },
+
+    complianceCalendar: {
+      title: "MCA Compliance Calendar",
+      description: "Never miss critical ROC deadlines with our comprehensive filing calendar",
+      deadlines: [
+        {
+          period: "Quarterly",
+          filings: [
+            { form: "Board Meeting", description: "Mandatory board meeting every quarter", dueDate: "Within 120 days of previous meeting" },
+            { form: "E-form ADT-1", description: "Appointment of auditor (if applicable)", dueDate: "Within 15 days of AGM" }
+          ]
+        },
+        {
+          period: "Annual",
+          filings: [
+            { form: "AOC-4", description: "Filing of financial statements and annual accounts", dueDate: "Within 30 days of AGM" },
+            { form: "MGT-7", description: "Annual return filing", dueDate: "Within 60 days of AGM" },
+            { form: "DIR-3 KYC", description: "Director KYC filing", dueDate: "By 30th September annually" },
+            { form: "Annual General Meeting", description: "Hold AGM within stipulated time", dueDate: "Within 6 months of FY end (30th September)" },
+            { form: "ADT-1", description: "Appointment/re-appointment of auditors", dueDate: "Within 15 days of AGM" },
+            { form: "DPT-3", description: "Return of deposits", dueDate: "On or before 30th June annually" }
+          ]
+        },
+        {
+          period: "Event-Based",
+          filings: [
+            { form: "DIR-12", description: "Changes in directors (appointment/resignation)", dueDate: "Within 30 days of change" },
+            { form: "MGT-14", description: "Filing of board/shareholder resolutions", dueDate: "Within 30 days of passing resolution" },
+            { form: "SH-7", description: "Alteration in share capital", dueDate: "Within 30 days of alteration" },
+            { form: "INC-22", description: "Notice of situation/change of registered office", dueDate: "Within 30 days of change" },
+            { form: "INC-28", description: "Change in name of company", dueDate: "Within 30 days of special resolution" }
+          ]
+        },
+        {
+          period: "Periodic Compliance",
+          filings: [
+            { form: "Board Meetings", description: "Minimum 4 board meetings per year", dueDate: "Gap not more than 120 days" },
+            { form: "Audit Committee Meeting", description: "For applicable companies", dueDate: "At least 4 times a year" },
+            { form: "Statutory Registers", description: "Maintenance of mandatory registers", dueDate: "Ongoing" }
+          ]
+        }
+      ]
+    },
+
+    industryGuidance: {
+      title: "Entity-Specific MCA Compliance",
+      description: "Tailored compliance solutions for different company types",
+      sectors: [
+        {
+          name: "Private Limited Companies",
+          challenges: [
+            "Minimum 2 directors and 2 shareholders requirement",
+            "Restrictions on transfer of shares",
+            "Compliance with related party transaction norms",
+            "Maintenance of statutory books and registers"
+          ],
+          solutions: [
+            "Director appointment and KYC compliance",
+            "Share transfer documentation and filing",
+            "RPT policy framework and approval matrix",
+            "Digital register maintenance systems"
+          ]
+        },
+        {
+          name: "One Person Company (OPC)",
+          challenges: [
+            "Nominee director appointment requirement",
+            "Conversion to private limited on threshold breach",
+            "Annual compliance with relaxed norms",
+            "Limited business activity restrictions"
+          ],
+          solutions: [
+            "Nominee appointment documentation",
+            "Threshold monitoring and timely conversion",
+            "Simplified compliance management",
+            "Business expansion advisory"
+          ]
+        },
+        {
+          name: "Public Limited Companies",
+          challenges: [
+            "Minimum 7 shareholders and 3 directors",
+            "Mandatory audit committee and nomination committee",
+            "Stringent disclosure and transparency requirements",
+            "Quarterly compliance monitoring"
+          ],
+          solutions: [
+            "Board constitution and committee formation",
+            "Comprehensive compliance calendar",
+            "Disclosure framework implementation",
+            "Quarterly compliance tracking"
+          ]
+        },
+        {
+          name: "Section 8 Companies (NPO)",
+          challenges: [
+            "License renewal and compliance with objectives",
+            "Restrictions on profit distribution",
+            "Minimum 2 directors requirement",
+            "Application of income for charitable purposes"
+          ],
+          solutions: [
+            "License maintenance and renewal support",
+            "Governance framework for NPOs",
+            "Director compliance management",
+            "Fund utilization tracking and reporting"
+          ]
+        },
+        {
+          name: "Foreign Companies",
+          challenges: [
+            "Filing of FC-1 and FC-2 forms",
+            "Annual accounts filing in prescribed format",
+            "Changes in directors and authorized representatives",
+            "Compliance with Indian accounting standards"
+          ],
+          solutions: [
+            "Foreign company registration assistance",
+            "Ongoing filing and disclosure support",
+            "Liaison with Indian representatives",
+            "Accounting standard compliance advisory"
+          ]
+        },
+        {
+          name: "Startups & Small Companies",
+          challenges: [
+            "Exemptions under small company criteria",
+            "Startup India registration benefits",
+            "Compliance relaxations and their applicability",
+            "Cost-effective compliance management"
+          ],
+          solutions: [
+            "Small company criteria assessment",
+            "Startup registration and benefits advisory",
+            "Optimized compliance frameworks",
+            "Affordable compliance packages"
+          ]
+        }
+      ]
+    },
+
+    violations: {
+      title: "Common MCA Violations & Penalties",
+      description: "Understanding non-compliance risks and ensuring timely adherence",
+      commonViolations: [
+        {
+          violation: "Delayed Filing of Annual Returns (MGT-7)",
+          impact: "High",
+          penalty: "₹100 per day of delay (company) + ₹100 per day per officer in default. Maximum penalty can go up to ₹5 lakh for company",
+          prevention: "Automated compliance calendar, advance preparation of annual return, timely AGM scheduling"
+        },
+        {
+          violation: "Non-filing of Financial Statements (AOC-4)",
+          impact: "Critical",
+          penalty: "₹1,000 per day of delay for company and every officer. Can lead to striking off of company name from register",
+          prevention: "Timely audit completion, advance board meeting scheduling, systematic documentation"
+        },
+        {
+          violation: "Non-compliance with Board Meeting Requirements",
+          impact: "High",
+          penalty: "₹25,000 fine for company and ₹5,000 for each director. Repeated violations can lead to director disqualification",
+          prevention: "Quarterly board meeting calendar, automated reminders, proper notice and agenda circulation"
+        },
+        {
+          violation: "Failure to File DIR-3 KYC",
+          impact: "Critical",
+          penalty: "DIN becomes deactivated/marked as 'Deactivated due to non-filing of DIR-3 KYC'. Penalty of ₹5,000 for delayed filing",
+          prevention: "Annual DIR-3 KYC filing reminder system, director database maintenance"
+        },
+        {
+          violation: "Non-maintenance of Statutory Registers",
+          impact: "Medium",
+          penalty: "₹50,000 fine for company and ₹1,000 per day for continuing violation per officer",
+          prevention: "Digital statutory register systems, regular updates, dedicated compliance personnel"
+        },
+        {
+          violation: "Acceptance of Deposits without Compliance",
+          impact: "Critical",
+          penalty: "Imprisonment up to 7 years and fine up to ₹50 crore. Company liable to refund with interest",
+          prevention: "Understanding deposit regulations, legal opinion for any fund raising, proper documentation"
+        }
+      ],
+      strikeOffProcess: {
+        title: "Company Strike-Off & Dormant Status",
+        strikeOff: {
+          grounds: [
+            "Non-filing of financial statements/annual returns for continuous 2 years",
+            "Non-commencement of business within 1 year of incorporation",
+            "Not carrying on business for 2 immediately preceding financial years",
+            "Defunct company"
+          ],
+          consequences: ["Company name removed from ROC", "Dissolution of company", "Assets vest with government", "Revival requires NCLT approval"]
+        },
+        dormantStatus: {
+          eligibility: "Company formed for future project or holding asset with no significant accounting transactions",
+          process: ["File MSC-1 along with indemnity bond", "File MSC-3 every year", "File MSC-4 for becoming active again"],
+          benefits: ["Reduced compliance burden", "Lower penalties", "Easy revival process"]
+        }
+      }
+    },
+
+    caseStudies: {
+      title: "MCA Compliance Success Stories",
+      description: "How we've helped companies maintain perfect ROC compliance",
+      studies: [
+        {
+          title: "Startup to Public Company - Complete Transformation",
+          industry: "Technology",
+          challenge: "A rapidly growing tech startup needed to convert from private to public limited company in preparation for listing. The company had pending compliances for 2 years including unfiled annual returns, board meeting gaps, and unresolved audit qualifications.",
+          solution: "We conducted comprehensive compliance audit, filed all pending forms with condonation applications, regularized board meetings, resolved audit qualifications, and executed seamless conversion to public limited company. Post-conversion, established robust compliance framework with quarterly reviews.",
+          outcome: "All 18 pending compliances cleared within 90 days. Successful conversion to public limited company. Zero compliance gaps at the time of SEBI due diligence for IPO.",
+          impact: "Enabled ₹800 crore IPO, established compliance culture preventing future violations"
+        },
+        {
+          title: "Preventing Strike-Off - Last Minute Rescue",
+          industry: "Manufacturing",
+          challenge: "A manufacturing company received strike-off notice from ROC for non-filing of returns for 2 consecutive years. The company had been dormant but directors were unaware of ongoing compliance requirements.",
+          solution: "Filed urgent representation against strike-off notice with detailed explanation. Simultaneously filed all pending returns (4 years of AOC-4 and MGT-7) with additional fees and condonation. Regularized director KYC and updated registered office details.",
+          outcome: "Strike-off proceedings dropped by ROC. Company restored to active status with all compliances up to date.",
+          impact: "Saved company from dissolution, preserved ₹50 crore asset base, avoided NCLT revival proceedings costing ₹10+ lakh"
+        },
+        {
+          title: "Section 8 Company - License Renewal & Compliance",
+          industry: "Non-Profit",
+          challenge: "An educational trust operating as Section 8 company faced potential license cancellation due to non-compliance with charitable objects and delayed filing of annual documents.",
+          solution: "Prepared detailed report demonstrating application of funds for charitable purposes, regularized all pending filings, restructured activities to align with MOA objectives, and established quarterly compliance review mechanism.",
+          outcome: "License retained, compliance status restored, received appreciation from ROC for improved governance.",
+          impact: "Continued operations serving 5,000+ students annually, maintained tax exemptions worth ₹2 crore per year"
+        },
+        {
+          title: "Multi-Subsidiary Group - Centralized Compliance Management",
+          industry: "Retail",
+          challenge: "A retail group with 25 subsidiary companies faced compliance chaos with multiple missed deadlines, inconsistent documentation, and lack of centralized oversight. Annual compliance cost was ₹40 lakh with frequent penalties.",
+          solution: "Implemented group-level compliance management system with centralized calendar, standardized documentation templates, automated reminder systems, and dedicated compliance team. Created dashboard for real-time compliance status tracking across all entities.",
+          outcome: "Zero missed deadlines in subsequent 3 years. Reduced compliance cost by 35% through efficiency. Avoided penalties worth ₹15 lakh annually.",
+          impact: "Improved governance ratings, investor confidence increased, streamlined operations across group"
+        }
+      ]
+    },
+
+    resources: {
+      title: "MCA Compliance Resources",
+      description: "Essential tools and guides for maintaining corporate compliance",
+      tools: [
+        {
+          name: "Annual Compliance Checklist",
+          description: "Month-wise compliance calendar for companies",
+          type: "Excel Template"
+        },
+        {
+          name: "Board Resolution Templates",
+          description: "Ready-to-use templates for common board resolutions",
+          type: "Word Documents"
+        },
+        {
+          name: "Statutory Register Formats",
+          description: "Prescribed formats for all mandatory registers",
+          type: "Excel Templates"
+        },
+        {
+          name: "Fee Calculator",
+          description: "Calculate ROC filing fees including additional fees for delays",
+          type: "Interactive Tool"
+        },
+        {
+          name: "Form Requirement Matrix",
+          description: "Quick reference for which form to file for different events",
+          type: "PDF Guide"
+        },
+        {
+          name: "MCA Notification Tracker",
+          description: "Updates on latest MCA circulars and rule changes",
+          type: "Email Alerts"
+        }
+      ],
+      guides: [
+        {
+          title: "Company Incorporation Guide",
+          topics: ["Name approval", "SPICe+ filing", "Post-incorporation compliance", "Initial statutory registers"],
+          readTime: "20 min"
+        },
+        {
+          title: "Annual Filing Handbook",
+          topics: ["AOC-4 preparation", "MGT-7 filing", "AGM compliance", "Board report requirements"],
+          readTime: "25 min"
+        },
+        {
+          title: "Director Compliance Manual",
+          topics: ["DIN application", "DIR-3 KYC", "Appointment/resignation procedures", "Disclosure requirements"],
+          readTime: "15 min"
+        },
+        {
+          title: "Statutory Meetings Guide",
+          topics: ["Board meeting requirements", "AGM/EGM procedures", "Notice requirements", "Minutes drafting"],
+          readTime: "18 min"
         }
       ]
     },
@@ -1136,6 +2006,41 @@ export const regulatoryData = {
         question: "Who needs MCA compliance?",
         answer:
           "All companies registered under the Companies Act must comply with MCA filing requirements."
+      },
+      {
+        question: "What is the penalty for delayed filing of annual returns?",
+        answer:
+          "For MGT-7 (annual return), the penalty is ₹100 per day of delay for the company and ₹100 per day for every officer in default. For AOC-4 (financial statements), it's ₹1,000 per day for company and every officer. The total penalty can go up to ₹5 lakh for the company."
+      },
+      {
+        question: "What is DIR-3 KYC and when should it be filed?",
+        answer:
+          "DIR-3 KYC is an annual KYC filing required for all directors holding a Director Identification Number (DIN). It must be filed between April 1st and September 30th every year. Non-filing leads to deactivation of DIN and penalty of ₹5,000."
+      },
+      {
+        question: "How many board meetings are mandatory in a year?",
+        answer:
+          "Minimum 4 board meetings must be held every year with maximum gap of 120 days between two consecutive meetings. At least one meeting must be held in each half of the calendar year. Violation attracts penalty of ₹25,000 for company and ₹5,000 per director."
+      },
+      {
+        question: "What happens if my company doesn't file returns for 2 years?",
+        answer:
+          "If a company fails to file financial statements or annual returns for continuous 2 years, the Registrar may initiate strike-off proceedings. The company name can be removed from the register of companies, leading to dissolution. Revival requires NCLT proceedings which are time-consuming and expensive."
+      },
+      {
+        question: "What is a small company and what are the exemptions?",
+        answer:
+          "A small company is one with paid-up capital not exceeding ₹4 crore and turnover not exceeding ₹40 crore. Exemptions include: no requirement for cash flow statement, relaxed board report requirements, lesser quorum for meetings, and certain compliance relaxations. One-person companies and Section 8 companies cannot be classified as small companies."
+      },
+      {
+        question: "Can I file forms after the due date?",
+        answer:
+          "Yes, most forms can be filed after due date with payment of additional fees. The additional fee structure is: up to 30 days delay - normal additional fees; 31-60 days - 2 times additional fees; 61-90 days - 4 times; 91-180 days - 6 times; beyond 180 days - 10 times normal additional fees. Some forms require condonation of delay."
+      },
+      {
+        question: "What statutory registers must a company maintain?",
+        answer:
+          "Mandatory registers include: Register of Members, Register of Debenture Holders, Foreign Register (if applicable), Register of Loans/Guarantees/Securities, Register of Investments, Register of Contracts in which Directors are interested, Register of Directors and KMP, Register of Charges, and Minutes Books. These must be maintained at registered office and available for inspection."
       }
     ],
 
