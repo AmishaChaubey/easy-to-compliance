@@ -792,18 +792,17 @@ export default function ContactUs() {
 
       <div className="shell font-serif">
         <div
-          className="text-white hero-wrap"
+          className="text-white hero-wrap h-[300px] sm:h-[300px] md:h-[300px]"
           style={{
-            backgroundImage: 'url("/banner.png")',
+            backgroundImage: 'url("/banner-img/contact.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         >
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-            <h1 className="hero-title font-bold mb-3">Taxation Documents</h1>
+            <h1 className="hero-title font-bold mb-3">Contact us</h1>
             <p className="hero-sub text-blue-100 max-w-2xl">
-              Access comprehensive tax forms, circulars, notifications, and guidelines all in one place
-            </p>
+Get in touch for expert tax support.            </p>
           </div>
         </div>
 

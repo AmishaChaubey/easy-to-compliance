@@ -5,7 +5,9 @@ import { Menu, X, ChevronDown } from "lucide-react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [openSubDropdown, setOpenSubDropdown] = useState(null); // ← desktop sub-dropdown
   const [mobileOpenDropdown, setMobileOpenDropdown] = useState(null);
+  const [mobileOpenSubDropdown, setMobileOpenSubDropdown] = useState(null);
   const dropdownRef = useRef(null);
 
   // Close menu on resize to desktop (lg = 1024px)
@@ -25,6 +27,7 @@ const Navbar = () => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setIsMenuOpen(false);
         setMobileOpenDropdown(null);
+        setMobileOpenSubDropdown(null);
       }
     };
     if (isMenuOpen) {
@@ -60,6 +63,14 @@ const Navbar = () => {
         { to: "/services/audit", label: "Audit Services" },
         { to: "/services/consulting", label: "Consulting" },
         { to: "/services/payroll", label: "Payroll Management" },
+        {
+          to: "#",
+          label: "Corporate Consultancy",
+          subDropdown: [
+            { to: "/services/smeIpo", label: "SME IPO" },
+            { to: "/services/dueDiligence", label: "Due Diligence" },
+          ],
+        },
       ],
     },
     {
@@ -91,7 +102,6 @@ const Navbar = () => {
                 alt="Logo"
               />
               </Link>
-
             </div>
 
             {/* ── Desktop Nav Links (lg and above only) ── */}
@@ -101,7 +111,7 @@ const Navbar = () => {
                   key={link.to}
                   className="relative"
                   onMouseEnter={() => link.dropdown && setOpenDropdown(link.to)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  onMouseLeave={() => { setOpenDropdown(null); setOpenSubDropdown(null); }}
                 >
                   <Link
                     to={link.to}
@@ -118,18 +128,49 @@ const Navbar = () => {
                     )}
                   </Link>
 
-                  {/* Desktop Dropdown - removed mt-1 gap */}
+                  {/* Desktop Dropdown */}
                   {link.dropdown && openDropdown === link.to && (
                     <div className="absolute left-0 top-full pt-2 z-50">
                       <div className="w-52 bg-white rounded-xl shadow-xl border border-gray-100 py-2">
                         {link.dropdown.map((item) => (
-                          <Link
-                            key={item.to}
-                            to={item.to}
-                            className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#135192] transition-colors"
+                          <div
+                            key={item.label}
+                            className="relative"
+                            onMouseEnter={() => item.subDropdown && setOpenSubDropdown(item.label)}
+                            onMouseLeave={() => item.subDropdown && setOpenSubDropdown(null)}
                           >
-                            {item.label}
-                          </Link>
+                            {item.subDropdown ? (
+                              // Render a div (not Link) for items that have a sub-dropdown
+                              <div className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#135192] transition-colors flex items-center justify-between cursor-pointer">
+                                {item.label}
+                                <ChevronDown size={12} className="-rotate-90" />
+                              </div>
+                            ) : (
+                              <Link
+                                to={item.to}
+                                className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#135192] transition-colors"
+                              >
+                                {item.label}
+                              </Link>
+                            )}
+
+                            {/* Nested Sub-Dropdown */}
+                            {item.subDropdown && openSubDropdown === item.label && (
+                              <div className="absolute left-full top-0 pl-1 z-50">
+                                <div className="w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2">
+                                  {item.subDropdown.map((subItem) => (
+                                    <Link
+                                      key={subItem.to}
+                                      to={subItem.to}
+                                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#135192] transition-colors"
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -182,7 +223,6 @@ const Navbar = () => {
       >
         {/* Mobile/Tablet menu header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-          {/* <img className="h-9 md:h-11 w-auto" src="/logo.svg" alt="Logo" /> */}
           <button
             onClick={() => setIsMenuOpen(false)}
             className="p-2 rounded-md text-gray-500 hover:text-[#135192] hover:bg-blue-50 transition-colors"
@@ -200,11 +240,15 @@ const Navbar = () => {
                 <>
                   <button
                     className="w-full flex items-center justify-between text-gray-800 hover:text-[#135192] font-medium py-3 px-3 rounded-lg hover:bg-blue-50 transition-colors text-left text-[15px] md:text-base"
-                    onClick={() =>
-                      setMobileOpenDropdown(
-                        mobileOpenDropdown === link.to ? null : link.to
-                      )
-                    }
+                    onClick={() => {
+                      // When closing a parent, also close any open sub-dropdown
+                      if (mobileOpenDropdown === link.to) {
+                        setMobileOpenDropdown(null);
+                        setMobileOpenSubDropdown(null);
+                      } else {
+                        setMobileOpenDropdown(link.to);
+                      }
+                    }}
                     aria-expanded={mobileOpenDropdown === link.to}
                   >
                     {link.label}
@@ -220,24 +264,80 @@ const Navbar = () => {
                   <div
                     className={`overflow-hidden transition-all duration-300 ease-in-out ${
                       mobileOpenDropdown === link.to
-                        ? "max-h-64 opacity-100"
+                        ? "max-h-[600px] opacity-100"
                         : "max-h-0 opacity-0"
                     }`}
                   >
                     <div className="pl-3 pb-2 space-y-0.5">
                       {link.dropdown.map((item) => (
-                        <Link
-                          key={item.to}
-                          to={item.to}
-                          className="flex items-center gap-2.5 text-sm md:text-[15px] text-gray-600 hover:text-[#135192] hover:bg-blue-50 py-2.5 px-3 rounded-lg transition-colors"
-                          onClick={() => {
-                            setIsMenuOpen(false);
-                            setMobileOpenDropdown(null);
-                          }}
-                        >
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#135192] opacity-60 flex-shrink-0" />
-                          {item.label}
-                        </Link>
+                        <div key={item.to}>
+                          {item.subDropdown ? (
+                            <>
+                              {/* Corporate Consultancy with Sub-dropdown */}
+                              <button
+                                className="w-full flex items-center justify-between gap-2.5 text-sm md:text-[15px] text-gray-600 hover:text-[#135192] hover:bg-blue-50 py-2.5 px-3 rounded-lg transition-colors"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  // Toggle sub-dropdown using its own dedicated state
+                                  setMobileOpenSubDropdown(
+                                    mobileOpenSubDropdown === item.label ? null : item.label
+                                  );
+                                }}
+                              >
+                                <div className="flex items-center gap-2.5">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#135192] opacity-60 flex-shrink-0" />
+                                  {item.label}
+                                </div>
+                                <ChevronDown
+                                  size={14}
+                                  className={`transform transition-transform duration-200 flex-shrink-0 ${
+                                    mobileOpenSubDropdown === item.label ? "rotate-180" : ""
+                                  }`}
+                                />
+                              </button>
+                              
+                              {/* Sub-dropdown items — keyed by item.label, not item.to */}
+                              <div
+                                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                                  mobileOpenSubDropdown === item.label
+                                    ? "max-h-48 opacity-100"
+                                    : "max-h-0 opacity-0"
+                                }`}
+                              >
+                                <div className="pl-6 space-y-0.5 pt-1">
+                                  {item.subDropdown.map((subItem) => (
+                                    <Link
+                                      key={subItem.to}
+                                      to={subItem.to}
+                                      className="flex items-center gap-2 text-xs md:text-sm text-gray-600 hover:text-[#135192] hover:bg-blue-50 py-2 px-3 rounded-lg transition-colors"
+                                      onClick={() => {
+                                        setIsMenuOpen(false);
+                                        setMobileOpenDropdown(null);
+                                        setMobileOpenSubDropdown(null);
+                                      }}
+                                    >
+                                      <span className="w-1 h-1 rounded-full bg-[#135192] opacity-50 flex-shrink-0" />
+                                      {subItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            </>
+                          ) : (
+                            <Link
+                              to={item.to}
+                              className="flex items-center gap-2.5 text-sm md:text-[15px] text-gray-600 hover:text-[#135192] hover:bg-blue-50 py-2.5 px-3 rounded-lg transition-colors"
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setMobileOpenDropdown(null);
+                                setMobileOpenSubDropdown(null);
+                              }}
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-[#135192] opacity-60 flex-shrink-0" />
+                              {item.label}
+                            </Link>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -271,4 +371,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar; 

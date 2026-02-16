@@ -368,4 +368,191 @@ export const servicesData = {
       secondaryButton: "Request Demo"
     }
   }
+  ,
+    smeIpo: {
+    title: "SME IPO Advisory",
+    description: "End-to-end SME IPO consulting and listing support.",
+    features: [
+      "IPO Readiness Assessment",
+      "Merchant Banker Coordination",
+      "Draft Prospectus Support",
+      "Stock Exchange Listing Assistance"
+    ],
+    hero: {
+      title: "Complete SME IPO Advisory Services",
+      subtitle: "From preparation to listing – we guide your business through every stage of the SME IPO journey",
+      image: "https://i.pinimg.com/736x/0d/6b/f1/0d6bf1d770432b0b00889a223406ec48.jpg",
+      cta: "Start IPO Consultation"
+    },
+    about: {
+      title: "Expert Guidance for SME IPO Listing",
+      description: "We provide comprehensive SME IPO advisory services to help small and medium enterprises raise capital and get listed on recognized stock exchanges. Our team ensures regulatory compliance, financial restructuring, and seamless coordination with intermediaries.",
+      highlights: [
+        "End-to-end IPO support",
+        "Regulatory compliance expertise",
+        "Coordination with merchant bankers & legal teams",
+        "Listing support on SME platforms"
+      ]
+    },
+    detailedFeatures: [
+      {
+        icon: "",
+        title: "IPO Readiness Assessment",
+        description: "Evaluate financials, compliance status, and eligibility before initiating IPO process"
+      },
+      {
+        icon: "",
+        title: "Documentation & DRHP Support",
+        description: "Preparation and review of Draft Red Herring Prospectus and required filings"
+      },
+      {
+        icon: "",
+        title: "Exchange Listing Assistance",
+        description: "Complete support for listing on BSE SME and NSE Emerge platforms"
+      }
+    ],
+    process: {
+      title: "Our SME IPO Process",
+      steps: [
+        {
+          number: "01",
+          title: "Eligibility Assessment",
+          description: "Review financials and business structure for IPO readiness"
+        },
+        {
+          number: "02",
+          title: "Restructuring & Compliance",
+          description: "Corporate restructuring and regulatory compliance alignment"
+        },
+        {
+          number: "03",
+          title: "Documentation & Filing",
+          description: "Preparation of offer documents and coordination with stock exchange"
+        },
+        {
+          number: "04",
+          title: "Listing & Post-IPO Support",
+          description: "Support during listing and post-listing compliance management"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "Who is eligible for SME IPO?",
+        answer: "SMEs meeting net worth, profitability, and compliance criteria as prescribed by stock exchanges can apply for SME IPO."
+      },
+      {
+        question: "How long does SME IPO process take?",
+        answer: "Typically 4-6 months depending on documentation readiness and regulatory approvals."
+      },
+      {
+        question: "Which exchanges support SME IPO?",
+        answer: "SME IPOs are listed on BSE SME and NSE Emerge platforms."
+      },
+      {
+        question: "Do you provide post-listing compliance support?",
+        answer: "Yes, we provide continuous compliance and reporting support after listing."
+      }
+    ],
+    cta: {
+      title: "Ready to Take Your Company Public?",
+      description: "Let our IPO experts guide your SME towards successful listing",
+      primaryButton: "Book IPO Consultation",
+      secondaryButton: "Download IPO Checklist"
+    }
+  },
+
+  dueDiligence: {
+    title: "Due Diligence Services",
+    description: "Comprehensive financial and legal due diligence solutions.",
+    features: [
+      "Financial Due Diligence",
+      "Legal Due Diligence",
+      "Tax Due Diligence",
+      "Transaction Advisory"
+    ],
+    hero: {
+      title: "Professional Due Diligence Services",
+      subtitle: "Identify risks, verify financials, and make informed investment decisions",
+      image: "https://i.pinimg.com/1200x/7f/22/97/7f2297a1297c7a09833bcd3be2e44d16.jpg",
+      cta: "Request Due Diligence"
+    },
+    about: {
+      title: "Thorough & Reliable Due Diligence",
+      description: "Our due diligence services help investors, buyers, and stakeholders assess financial health, legal compliance, and operational risks before mergers, acquisitions, investments, or funding decisions.",
+      highlights: [
+        "Comprehensive risk assessment",
+        "Detailed financial analysis",
+        "Regulatory compliance review",
+        "Confidential & secure process"
+      ]
+    },
+    detailedFeatures: [
+      {
+        icon: "",
+        title: "Financial Due Diligence",
+        description: "Analysis of financial statements, cash flows, liabilities, and projections"
+      },
+      {
+        icon: "",
+        title: "Legal Due Diligence",
+        description: "Review of contracts, agreements, licenses, and statutory compliance"
+      },
+      {
+        icon: "",
+        title: "Tax Due Diligence",
+        description: "Assessment of tax liabilities, filings, and potential tax exposures"
+      }
+    ],
+    process: {
+      title: "Our Due Diligence Process",
+      steps: [
+        {
+          number: "01",
+          title: "Scope Definition",
+          description: "Define objectives and areas of review based on transaction type"
+        },
+        {
+          number: "02",
+          title: "Data Collection",
+          description: "Gather financial, legal, and operational documents"
+        },
+        {
+          number: "03",
+          title: "Analysis & Risk Identification",
+          description: "Evaluate documents and identify potential risks and gaps"
+        },
+        {
+          number: "04",
+          title: "Reporting",
+          description: "Deliver comprehensive due diligence report with findings"
+        }
+      ]
+    },
+    faqs: [
+      {
+        question: "When is due diligence required?",
+        answer: "Due diligence is essential before mergers, acquisitions, investments, funding rounds, and major business transactions."
+      },
+      {
+        question: "How long does due diligence take?",
+        answer: "Depending on business size and scope, it typically takes 2-6 weeks."
+      },
+      {
+        question: "Is due diligence confidential?",
+        answer: "Yes, we follow strict confidentiality and data protection protocols."
+      },
+      {
+        question: "Do you assist investors or sellers?",
+        answer: "We assist both buyers and sellers with customized due diligence services."
+      }
+    ],
+    cta: {
+      title: "Make Informed Business Decisions",
+      description: "Mitigate risks with professional due diligence services",
+      primaryButton: "Get Risk Assessment",
+      secondaryButton: "Talk to Expert"
+    }
+  }
+
 };
