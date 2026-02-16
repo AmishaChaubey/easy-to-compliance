@@ -5,6 +5,8 @@ import {
   List, Menu, X
 } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const TaxCompliancePage = ({
   heroData,
   bannerData,
@@ -133,12 +135,17 @@ const TaxCompliancePage = ({
               {heroData?.description}
             </p>
             <div className="hero-btns flex flex-wrap gap-3 sm:gap-4">
+            <Link to="/contact">
               <button className="bg-white text-[#135192] px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-blue-50 transition text-sm sm:text-base">
                 {heroData?.primaryButtonText}
               </button>
+              </Link>
+
+              <Link to="/contact">
               <button className="border-2 border-white text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-white hover:text-[#135192] transition text-sm sm:text-base">
                 {heroData?.secondaryButtonText}
               </button>
+              </Link>
             </div>
           </div>
         </div>

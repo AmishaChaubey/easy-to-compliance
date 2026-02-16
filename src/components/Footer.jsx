@@ -272,6 +272,149 @@ const Footer = () => {
           color: #fff;
         }
         
+        /* Extra Small Devices - Enhanced Responsiveness (max 359px) */
+        @media (max-width: 359px) {
+          .footer-container {
+            padding: 0 0.75rem;
+          }
+          
+          .footer-main {
+            padding: 1.75rem 0 1.5rem;
+          }
+          
+          .footer-grid {
+            gap: 1.5rem;
+          }
+          
+          .footer-logo {
+            width: 8.5rem;
+            margin-left: -1rem;
+          }
+          
+          .footer-description {
+            font-size: 0.8125rem;
+            line-height: 1.5;
+            margin-top: -0.75rem;
+            margin-bottom: 1rem;
+          }
+          
+          .social-links {
+            gap: 0.5rem;
+          }
+          
+          .social-icon {
+            width: 2rem;
+            height: 2rem;
+          }
+          
+          .social-icon svg {
+            width: 0.875rem;
+            height: 0.875rem;
+          }
+          
+          .footer-section-title {
+            font-size: 0.9375rem;
+            margin-bottom: 0.875rem;
+            padding-bottom: 0.5rem;
+          }
+          
+          .footer-section-title::after {
+            width: 2rem;
+          }
+          
+          .footer-link {
+            font-size: 0.8125rem;
+          }
+          
+          .footer-link-item {
+            margin-bottom: 0.5rem;
+          }
+          
+          .footer-link svg {
+            width: 0.625rem;
+            height: 0.625rem;
+            margin-left: 0.25rem;
+          }
+          
+          .contact-item {
+            padding: 0.5rem;
+            margin-bottom: 0.625rem;
+            gap: 0.625rem;
+          }
+          
+          .contact-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            min-width: 1.75rem;
+          }
+          
+          .contact-icon svg {
+            width: 0.875rem;
+            height: 0.875rem;
+          }
+          
+          .contact-text {
+            font-size: 0.8125rem;
+            line-height: 1.4;
+          }
+          
+          .newsletter-wrapper {
+            padding: 1.25rem 0;
+          }
+          
+          .newsletter-section {
+            padding: 1rem;
+          }
+          
+          .newsletter-title {
+            font-size: 0.875rem;
+            margin-bottom: 0.375rem;
+          }
+          
+          .newsletter-description {
+            font-size: 0.75rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+          }
+          
+          .newsletter-form {
+            gap: 0.5rem;
+          }
+          
+          .newsletter-input {
+            padding: 0.625rem 0.875rem;
+            font-size: 0.8125rem;
+          }
+          
+          .newsletter-button {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.8125rem;
+          }
+          
+          .footer-bottom {
+            padding: 1.25rem 0;
+          }
+          
+          .footer-bottom-content {
+            gap: 0.875rem;
+          }
+          
+          .footer-copyright {
+            font-size: 0.75rem;
+            line-height: 1.4;
+          }
+          
+          .footer-bottom-links {
+            gap: 0.625rem;
+            flex-direction: column;
+            align-items: center;
+          }
+          
+          .footer-bottom-link {
+            font-size: 0.75rem;
+          }
+        }
+        
         /* Small Mobile (360px+) - Better spacing for very small screens */
         @media (min-width: 360px) {
           .footer-container {
@@ -460,43 +603,6 @@ const Footer = () => {
             gap: 5rem;
           }
         }
-        
-        /* Extra attention to very small screens */
-        @media (max-width: 359px) {
-          .footer-container {
-            padding: 0 0.75rem;
-          }
-          
-          .footer-main {
-            padding: 2rem 0 1.75rem;
-          }
-          
-          .footer-logo {
-            width: 5rem;
-          }
-          
-          .footer-description {
-            font-size: 0.8125rem;
-          }
-          
-          .social-icon {
-            width: 2rem;
-            height: 2rem;
-          }
-          
-          .social-icon svg {
-            width: 0.875rem;
-            height: 0.875rem;
-          }
-          
-          .newsletter-section {
-            padding: 1rem;
-          }
-          
-          .footer-bottom-links {
-            gap: 0.75rem;
-          }
-        }
       `}</style>
 
       <div className="footer-container ">
@@ -508,7 +614,7 @@ const Footer = () => {
             <div className="footer-brand ">
               <img
                 className="footer-logo -mt-18"
-                src="/logo.svg"
+                src="/logo3.svg"
                 alt="Easy To Compliance Logo"
               />
 

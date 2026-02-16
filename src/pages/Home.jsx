@@ -459,7 +459,7 @@ const TaxWebsite = () => {
                 ))}
               </ul>
 
-              <Link to="/contact">
+              <Link to="/about">
               <button className="w-full py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm md:text-base text-white font-semibold rounded-lg transition-all duration-300 hover:opacity-90 shadow-md" style={{ backgroundColor: '#135192' }}>
                 Learn More
               </button>
@@ -498,9 +498,7 @@ const TaxWebsite = () => {
                 <p className="service-desc text-gray-600 mb-2 sm:mb-3 md:mb-4 leading-relaxed">
                   {service.desc}
                 </p>
-                <Link to="/contact" className="inline-flex items-center service-desc font-semibold hover:underline transition-all" style={{ color: '#135192' }}>
-                  Visit us <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                </Link>
+              
               </div>
             ))}
           </div>

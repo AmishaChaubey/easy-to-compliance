@@ -792,9 +792,9 @@ export default function ContactUs() {
 
       <div className="shell font-serif">
         <div
-          className="text-white hero-wrap h-[300px] sm:h-[300px] md:h-[300px]"
+          className="text-white hero-wrap h-[300px] sm:h-[300px] md:h-[500px]"
           style={{
-            backgroundImage: 'url("/banner-img/contact.png")',
+            backgroundImage: 'url("/banner-img/contact2.png")',
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
@@ -885,7 +885,7 @@ Get in touch for expert tax support.            </p>
                       onChange={handleChange}
                       onFocus={() => setFocusedField('phone')}
                       onBlur={() => setFocusedField(null)}
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 XXXXXXXXXX"
                     />
                   </div>
                 </div>
@@ -967,7 +967,7 @@ Get in touch for expert tax support.            </p>
                 {
                   id: 'phone',
                   lbl: 'Call us',
-                  val: '+1 (555) 123-4567',
+                  val: '+91 9999999999',
                   sub: 'Mon–Fri, 9am–6pm EST',
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -989,8 +989,8 @@ Get in touch for expert tax support.            </p>
                 {
                   id: 'loc',
                   lbl: 'Visit us',
-                  val: '123 Finance Street',
-                  sub: 'New York, NY 10001',
+                  val: 'Galaxy Diamond Plaza ',
+                  sub: 'Greater Noida,UP',
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

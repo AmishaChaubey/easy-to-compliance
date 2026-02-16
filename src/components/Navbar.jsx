@@ -97,8 +97,8 @@ const Navbar = () => {
             <div className="flex items-center flex-shrink-0">
               <Link to="/">
               <img
-                className="h-30 sm:h-20 md:h-30 lg:h-30 xl:h-40 w-auto"
-                src="/logo.svg"
+                className="h-30 sm:h-20 md:h-30 lg:h-30 xl:h-30 w-auto"
+                src="/logo3.svg"
                 alt="Logo"
               />
               </Link>

@@ -151,67 +151,100 @@ const Regulatory = () => {
     <div className="min-h-screen bg-white">
       
       {/* Hero Section - Clean & Professional */}
-      <section className="relative w-full  text-white overflow-hidden">
-        
-        <div className="absolute inset-0">
-          <img 
-            src={regulatory.hero.image} 
-            alt="Banner Background"
-            className="w-full h-full object-cover "  
-   
-          />
-          <div className="absolute inset-0 bg-[#000000]/45"></div>
-        </div>
+     <section
+  className="relative w-full text-white overflow-hidden 
+  min-h-[clamp(320px,55vw,600px)] flex items-center"
+>
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <img
+      src={regulatory.hero.image}
+      alt="Banner Background"
+      className="w-full h-full object-cover"
+    />
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-black/50"></div>
+  </div>
 
+  {/* Subtle Geometric Pattern */}
+  <div className="absolute inset-0 opacity-5 pointer-events-none">
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage: `repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 35px,
+          rgba(255,255,255,.1) 35px,
+          rgba(255,255,255,.1) 70px
+        )`,
+      }}
+    ></div>
+  </div>
 
-        {/* Subtle geometric pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)`
-          }}></div>
-        </div>
+  {/* Content Container */}
+  <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+  py-12 sm:py-16 md:py-20 lg:py-24">
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 xs:py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28">
-          <div className="max-w-4xl">
+    <div className="max-w-4xl">
 
-            {/* Badge */}
-            <div className="mb-4 xs:mb-5 sm:mb-6 md:mb-8 inline-flex items-center gap-1.5 sm:gap-2 px-3 xs:px-4 sm:px-6 py-1.5 xs:py-2 sm:py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-              <Shield className="w-3.5 h-3.5 xs:w-4 xs:h-4 sm:w-5 sm:h-5" />
-              <span className="font-semibold tracking-wide uppercase text-[10px] xs:text-xs sm:text-sm">
-                Premium {regulatoryId?.toUpperCase()} Service
-              </span>
-            </div>
+      {/* Badge */}
+      <div className="mb-6 inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 
+      bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+        <Shield className="w-4 h-4 sm:w-5 sm:h-5" />
+        <span className="font-semibold tracking-wide uppercase text-xs sm:text-sm">
+          Premium {regulatoryId?.toUpperCase()} Service
+        </span>
+      </div>
 
-            {/* Main heading */}
-            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 xs:mb-5 sm:mb-6 md:mb-8 leading-tight font-serif">
-              {regulatory.hero.title}
-            </h1>
+      {/* Main Heading */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
+      font-black mb-6 leading-tight font-serif">
+        {regulatory.hero.title}
+      </h1>
 
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl mb-6 xs:mb-7 sm:mb-8 md:mb-10 lg:mb-12 leading-relaxed text-white/90 max-w-3xl font-serif">
-              {regulatory.hero.subtitle}
-            </p>
+      {/* Subtitle */}
+      <p className="text-base sm:text-lg md:text-xl 
+      mb-10 leading-relaxed text-white/90 max-w-3xl font-serif">
+        {regulatory.hero.subtitle}
+      </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col xs:flex-row flex-wrap gap-2.5 xs:gap-3 sm:gap-4 mb-8 xs:mb-10 sm:mb-12 md:mb-16">
-            <div className="flex flex-col sm:flex-row  gap-4 mt-6">
-  
- <Link to='/contact'> <button className="group w-full sm:w-auto bg-white text-[#135192] px-5 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-bold hover:bg-black hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg text-sm xs:text-base">
-    <span>{regulatory.hero.cta}</span>
-    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-  </button></Link>
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4">
 
-  <Link to='/contact'><button className="w-full sm:w-auto border-2 border-white text-white px-5 xs:px-6 sm:px-8 py-2.5 xs:py-3 sm:py-4 rounded-lg font-bold hover:bg-white hover:text-[#135192] transition-all duration-300 flex items-center justify-center gap-2 text-sm xs:text-base">
-    <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-    <span>Schedule Call</span>
-  </button></Link>
+        <Link to="/contact">
+          <button
+            className="group w-full sm:w-auto bg-white text-[#135192] 
+            px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold 
+            hover:bg-black hover:text-white 
+            transition-all duration-300 flex items-center 
+            justify-center gap-2 shadow-lg text-sm sm:text-base"
+          >
+            <span>{regulatory.hero.cta}</span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 
+            group-hover:translate-x-1 transition-transform" />
+          </button>
+        </Link>
 
-</div>
+        <Link to="/contact">
+          <button
+            className="w-full sm:w-auto border-2 border-white text-white 
+            px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold 
+            hover:bg-white hover:text-[#135192] 
+            transition-all duration-300 flex items-center 
+            justify-center gap-2 text-sm sm:text-base"
+          >
+            <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span>Schedule Call</span>
+          </button>
+        </Link>
 
-            </div>
+      </div>
 
-          </div>
-        </div>
-      </section>
+    </div>
+  </div>
+</section>
+
 
       {/* Mobile Navigation Toggle - NOW BELOW BANNER, LEFT SIDE */}
       <div className="lg:hidden sticky top-0 z-40 bg-white ">
@@ -276,7 +309,7 @@ const Regulatory = () => {
                 <p className="text-xs sm:text-sm text-gray-700 mb-3 sm:mb-4">
                   Our experts are ready to assist
                 </p>
-                <Link to='/'>
+                <Link to='/contact'>
                   <button className="w-full bg-[#135192] text-white px-3 sm:px-4 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-bold hover:bg-white hover:text-[#135192] transition-all duration-300 flex items-center justify-center gap-2 border-2 border-transparent hover:border-[#135192]">
                     <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     Contact Us
@@ -336,7 +369,7 @@ const Regulatory = () => {
                 <p className="text-xs xl:text-sm text-gray-700 mb-3 xl:mb-4">
                   Our experts are ready to assist
                 </p>
-                <Link to='/'>
+                <Link to='/contact'>
                   <button className="w-full bg-[#135192] text-white px-3 xl:px-4 py-2.5 xl:py-3 rounded-lg text-sm font-bold hover:bg-white hover:text-[#135192] transition-all duration-300 flex items-center justify-center gap-2 border-2 border-transparent hover:border-[#135192]">
                     <Mail className="w-3.5 h-3.5 xl:w-4 xl:h-4" />
                     Contact Us

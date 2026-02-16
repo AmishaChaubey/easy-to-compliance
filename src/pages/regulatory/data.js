@@ -1617,7 +1617,7 @@ export const regulatoryData = {
       title: "MCA & ROC Compliance Services",
       subtitle:
         "End-to-end compliance under Companies Act and Ministry of Corporate Affairs.",
-      image: "/banner-img/mca.png",
+      image: "/banner-img/mca-c.png",
       cta: "Get MCA Support"
     },
 

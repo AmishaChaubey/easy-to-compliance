@@ -3,6 +3,7 @@ import {
   ChevronDown, CheckCircle, Shield, FileText,
   TrendingUp, Users, Clock, Award, Star
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CompliancePage = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -79,47 +80,80 @@ const CompliancePage = () => {
       `}</style>
 
       {/* ─── Hero ─── */}
-      <section
-        className="relative text-white"
-        style={{
-          backgroundImage: 'url("https://i.pinimg.com/1200x/8d/2a/49/8d2a496c6d4c6df1ff93098a2c342656.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: 'clamp(480px, 90vh, 100vh)',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
+  <section
+  className="relative text-white flex items-center overflow-hidden"
+  style={{
+    backgroundImage:
+      'url("https://i.pinimg.com/1200x/8d/2a/49/8d2a496c6d4c6df1ff93098a2c342656.jpg")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: 'clamp(420px, 65vh, 750px)',
+  }}
+>
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-          <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 px-3 sm:px-4 py-2 rounded-full mb-6 sm:mb-8 animate-fadeInUp">
-              <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium">Trusted by 500+ Businesses Nationwide</span>
-            </div>
+  {/* Content */}
+  <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 
+  py-14 sm:py-16 md:py-20">
 
-            <h1 className="hero-title font-bold mb-6 sm:mb-8 leading-tight animate-fadeInUp delay-100">
-              Tax Compliance
-              <span className="block mt-1 sm:mt-2 opacity-90">Made Simple</span>
-            </h1>
+    <div className="max-w-4xl">
 
-            <p className="hero-sub text-white/80 mb-8 sm:mb-12 leading-relaxed max-w-2xl animate-fadeInUp delay-200">
-              Navigate complex tax regulations with confidence. Our expert team ensures your
-              business stays compliant, minimizing risks and maximizing efficiency.
-            </p>
+      {/* Badge */}
+      <div className="inline-flex items-center gap-2 bg-white/10 
+      backdrop-blur-sm px-4 py-2 rounded-full mb-6 sm:mb-8 
+      animate-fadeInUp">
+        <Star className="w-4 h-4 fill-current flex-shrink-0" />
+        <span className="text-xs sm:text-sm font-medium">
+          Trusted by 500+ Businesses Nationwide
+        </span>
+      </div>
 
-            <div className="hero-btns flex flex-wrap gap-3 sm:gap-4 animate-fadeInUp delay-300">
-              <button className="bg-white text-[#135192] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:shadow-xl transition-smooth text-sm sm:text-base">
-                Get Started Today
-              </button>
-              <button className="border-2 border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white/10 transition-smooth text-sm sm:text-base">
-                Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Heading */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl 
+      font-bold mb-6 sm:mb-8 leading-tight animate-fadeInUp delay-100">
+        Tax Compliance
+        <span className="block mt-2 opacity-90">
+          Made Simple
+        </span>
+      </h1>
+
+      {/* Subtitle */}
+      <p className="text-base sm:text-lg md:text-xl text-white/80 
+      mb-10 leading-relaxed max-w-2xl 
+      animate-fadeInUp delay-200">
+        Navigate complex tax regulations with confidence. Our expert team ensures your
+        business stays compliant, minimizing risks and maximizing efficiency.
+      </p>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 
+      animate-fadeInUp delay-300">
+
+        <Link to="/about">
+          <button className="w-full sm:w-auto bg-white text-[#135192] 
+          px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold 
+          hover:shadow-xl transition-all duration-300 
+          text-sm sm:text-base">
+            Know More
+          </button>
+        </Link>
+
+        <Link to="/contact">
+          <button className="w-full sm:w-auto border-2 border-white/40 
+          text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg 
+          font-semibold hover:bg-white/10 
+          transition-all duration-300 text-sm sm:text-base">
+            Schedule Consultation
+          </button>
+        </Link>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* ─── Services ─── */}
       <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
