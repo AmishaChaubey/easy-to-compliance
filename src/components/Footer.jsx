@@ -28,11 +28,12 @@ const Footer = () => {
           max-width: 100%;
         }
         
-        .footer-logo {
-          width: 10rem;
-          height: auto;
+        .footer-logo-text {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: white;
           margin-bottom: 1rem;
-          margin-left: -1.25rem;
+          letter-spacing: -0.025em;
         }
         
         .footer-description {
@@ -40,7 +41,6 @@ const Footer = () => {
           line-height: 1.6;
           color: rgba(255, 255, 255, 0.85);
           margin-bottom: 1.25rem;
-          margin-top: -1rem;
         }
         
         .social-links {
@@ -286,15 +286,13 @@ const Footer = () => {
             gap: 1.5rem;
           }
           
-          .footer-logo {
-            width: 8.5rem;
-            margin-left: -1rem;
+          .footer-logo-text {
+            font-size: 1.25rem;
           }
           
           .footer-description {
             font-size: 0.8125rem;
             line-height: 1.5;
-            margin-top: -0.75rem;
             margin-bottom: 1rem;
           }
           
@@ -421,8 +419,8 @@ const Footer = () => {
             padding: 0 1.25rem;
           }
           
-          .footer-logo {
-            width: 11rem;
+          .footer-logo-text {
+            font-size: 1.375rem;
           }
         }
         
@@ -432,8 +430,8 @@ const Footer = () => {
             padding: 2.75rem 0 2.25rem;
           }
           
-          .footer-logo {
-            width: 12rem;
+          .footer-logo-text {
+            font-size: 1.625rem;
           }
           
           .footer-description {
@@ -486,8 +484,8 @@ const Footer = () => {
             gap: 2.5rem;
           }
           
-          .footer-logo {
-            width: 13rem;
+          .footer-logo-text {
+            font-size: 1.75rem;
           }
           
           .social-icon {
@@ -554,13 +552,8 @@ const Footer = () => {
             gap: 3rem;
           }
           
-          .footer-logo {
-            width: 14rem;
-            margin-top: -5rem;
-          }
-          
-          .footer-description {
-            margin-top: -4.5rem;
+          .footer-logo-text {
+            font-size: 2rem;
           }
           
           .footer-bottom-content {
@@ -605,25 +598,21 @@ const Footer = () => {
         }
       `}</style>
 
-      <div className="footer-container ">
+      <div className="footer-container">
         {/* Main Footer Content */}
         <div className="footer-main">
           <div className="footer-grid">
             
             {/* Brand Section */}
-            <div className="footer-brand ">
-              <img
-                className="footer-logo -mt-18"
-                src="/logo3.svg"
-                alt="Easy To Compliance Logo"
-              />
+            <div className="footer-brand">
+              <h2 className="footer-logo-text">
+                EasyToCompliance
+              </h2>
 
-              <div className="-mt-15">
-              <p className="footer-description ">
+              <p className="footer-description">
                 Your trusted partner for tax compliance and regulatory filings. We simplify complex processes so you can focus on growing your business with confidence.
               </p>
 
-              
               {/* Social Links */}
               <div className="social-links">
                 <a href="#" className="social-icon" aria-label="Facebook">
@@ -639,7 +628,6 @@ const Footer = () => {
                   <Instagram />
                 </a>
               </div>
-              </div>
             </div>
 
             {/* Quick Links */}
@@ -647,12 +635,10 @@ const Footer = () => {
               <h3 className="footer-section-title">Quick Links</h3>
               <ul>
                 {[
-               
                   { name: "About Us", path: "/about" },
                   { name: "Compliance", path: "/compliance" },
                   { name: "Blog", path: "/blog" },
                   { name: "Contact", path: "/contact" },
-             
                 ].map((link) => (
                   <li key={link.name} className="footer-link-item">
                     <Link to={link.path} className="footer-link">
@@ -673,7 +659,6 @@ const Footer = () => {
                   { name: "Audit Services", path: "/services/audit" },
                   { name: "Payroll Management", path: "/services/payroll" },
                   { name: "Consulting", path: "/services/consulting" },
-              
                 ].map((service) => (
                   <li key={service.name} className="footer-link-item">
                     <Link to={service.path} className="footer-link">
