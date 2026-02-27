@@ -21,7 +21,8 @@ import {
   Calendar,
   Menu,
   X,
-  ChevronDown
+  ChevronDown,
+  ArrowUp
 } from 'lucide-react';
 
 const ServicePage = () => {
@@ -30,11 +31,20 @@ const ServicePage = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const [activeSection, setActiveSection] = useState("hero");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Scroll to top on page load or when serviceId changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [serviceId]);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["hero", "about", "features", "process", "stats", "faq"];
       const scrollPosition = window.scrollY + 100;
+
+      // Show/hide scroll-to-top button
+      setShowScrollTop(window.scrollY > 300);
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -51,6 +61,13 @@ const ServicePage = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
 
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
@@ -88,10 +105,7 @@ const ServicePage = () => {
     { id: "faq", label: "FAQ", icon: HelpCircle }
   ];
 
-    useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []); 
-  
+
   return (
     <div className="min-h-screen bg-white font-serif">
       
@@ -103,6 +117,28 @@ const ServicePage = () => {
       >
         {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="hidden lg:flex fixed bottom-6 right-6 z-50 bg-[#135192] text-white p-4 rounded-full shadow-lg hover:bg-[#0f4178] transition items-center justify-center"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={24} />
+        </button>
+      )}
+
+      {/* Mobile Scroll to Top Button (shown above menu button when menu is closed) */}
+      {showScrollTop && !mobileMenuOpen && (
+        <button
+          onClick={scrollToTop}
+          className="lg:hidden fixed bottom-24 right-6 z-50 bg-white text-[#135192] border-2 border-[#135192] p-3 rounded-full shadow-lg hover:bg-blue-50 transition"
+          aria-label="Scroll to top"
+        >
+          <ArrowUp size={20} />
+        </button>
+      )}
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
@@ -159,6 +195,7 @@ const ServicePage = () => {
       
       {/* Hero Section */}
       <section
+        id="hero"
         className="relative w-full min-h-[500px] sm:min-h-[600px] lg:min-h-[550px] flex items-center text-white bg-cover bg-center"
         style={{
           backgroundImage: `url(${service.hero.image})`
