@@ -9,18 +9,18 @@ const Header = () => {
           <div className="flex items-center space-x-4 lg:space-x-6">
             <div className="flex items-center">
               <Phone className="w-4 h-4 mr-2 text-white" />
-              <span className="text-white">+91 999999999</span>
+              <span className="text-white">+91-9968285325</span>
             </div>
             <div className="flex items-center">
               <Mail className="w-4 h-4 mr-2 text-white" />
-              <span className="text-white">info@easytocompliance.com</span>
+              <span className="text-white">advrajneshjha@gmail.com</span>
             </div>
           </div>
 
           <div className="flex items-center">
             <MapPin className="w-4 h-4 mr-2 text-white" />
             <span className="text-white">
-              Galaxy Diamond Plaza, Noida, UP
+              D-507 TOWER D URBTECH TRADE CENTER , SECTOR 132 NOIDA 201301
             </span>
           </div>
         </div>

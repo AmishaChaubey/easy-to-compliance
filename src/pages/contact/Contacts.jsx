@@ -967,7 +967,7 @@ Get in touch for expert tax support.            </p>
                 {
                   id: 'phone',
                   lbl: 'Call us',
-                  val: '+91 9999999999',
+                  val: '+91-9968285325',
                   sub: 'Mon–Fri, 9am–6pm EST',
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -978,7 +978,7 @@ Get in touch for expert tax support.            </p>
                 {
                   id: 'email',
                   lbl: 'Email us',
-                  val: 'contact@taxexperts.com',
+                  val: 'advrajneshjha@gmail.com',
                   sub: 'Response within 24h',
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -989,8 +989,8 @@ Get in touch for expert tax support.            </p>
                 {
                   id: 'loc',
                   lbl: 'Visit us',
-                  val: 'Galaxy Diamond Plaza ',
-                  sub: 'Greater Noida,UP',
+                  val: 'D-507 TOWER D URBTECH TRADE CENTER',
+                  sub: 'SECTOR 132 NOIDA 201301',
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -1056,8 +1056,7 @@ Get in touch for expert tax support.            </p>
               <div className="map-frame">
                 <iframe
                   title="Office Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648718453!2d-73.98784368459418!3d40.74844097932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
-                  allowFullScreen=""
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112188.14295080956!2d77.23354339599608!3d28.513273925755296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce627dd126af1%3A0xf8e7c7bcbecc0868!2sBlock%20B%2C%20Sector%20132%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1772184240143!5m2!1sen!2sin"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
@@ -1071,11 +1070,11 @@ Get in touch for expert tax support.            </p>
                   </svg>
                 </div>
                 <div>
-                  <div className="mac-name">Tax Experts HQ</div>
+                  <div className="mac-name">Expert tax support</div>
                   <div className="mac-addr">
-                    123 Finance Street, Suite 400<br />New York, NY 10001, USA
+                    D-507 TOWER D URBTECH TRADE CENTER<br />SECTOR 132 NOIDA 201301
                   </div>
-                  <a className="mac-link" href="https://maps.google.com/?q=Empire+State+Building,+New+York" target="_blank" rel="noreferrer">
+                  <a className="mac-link" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112188.14295080956!2d77.23354339599608!3d28.513273925755296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce627dd126af1%3A0xf8e7c7bcbecc0868!2sBlock%20B%2C%20Sector%20132%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1772184240143!5m2!1sen!2sin" target="_blank" rel="noreferrer">
                     Get Directions
                     <svg fill="none" viewBox="0 0 24 24" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

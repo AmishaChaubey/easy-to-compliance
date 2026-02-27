@@ -367,8 +367,106 @@ export const servicesData = {
       primaryButton: "Get Started Now",
       secondaryButton: "Request Demo"
     }
+  },
+financeLoanConsultancyService: {
+  title: "Finance & Loan Consultancy Services",
+  description: "Fast, structured, and result-oriented financial solutions for businesses across India.",
+  features: [
+    "Business Loan Assistance (Secured & Unsecured)",
+    "MSME & Startup Funding Support",
+    "CMA & Project Report Preparation",
+    "PAN India Loan Processing Support"
+  ],
+  hero: {
+    title: "Complete Finance & Loan Support for All Business Entities",
+    subtitle: "We don’t just arrange loans — we build financially strong, approval-ready cases with strategic structuring and expert documentation.",
+    image: "https://images.pexels.com/photos/8292879/pexels-photo-8292879.jpeg",
+    cta: "Apply for Business Loan"
+  },
+  about: {
+    title: "End-to-End Loan & Finance Consultancy Across India",
+    description: "At Easy To Compliance, we provide comprehensive finance and loan consultancy services for startups, MSMEs, private limited companies, LLPs, partnership firms, proprietors, professionals, and other business entities. Our structured approach ensures higher approval chances with proper documentation, eligibility assessment, and bank coordination.",
+    highlights: [
+      "Higher loan approval success ratio",
+      "Expertise in complex and rejected cases",
+      "Strong CMA & financial documentation support",
+      "Dedicated professional advisory",
+      "PAN India loan assistance (online & offline)"
+    ]
+  },
+  detailedFeatures: [
+    {
+      icon: "",
+      title: "Business Loan Assistance",
+      description: "Support for working capital loans, term loans, overdraft limits, project funding, machinery finance, and business expansion loans."
+    },
+    {
+      icon: "",
+      title: "MSME & Startup Loan Support",
+      description: "Expert assistance in MSME loans, Mudra loans, CGTMSE cases, startup funding, and government-backed finance schemes."
+    },
+    {
+      icon: "",
+      title: "Unsecured & Secured Loan Solutions",
+      description: "Collateral-free loans based on turnover, ITR, GST, banking profile & CIBIL score, along with loan against property and industrial property funding."
+    },
+    {
+      icon: "",
+      title: "CMA & Project Report Preparation",
+      description: "Professional preparation of CMA data, financial statements, project reports, and complete bank compliance documentation."
+    }
+  ],
+  process: {
+    title: "Our Loan Processing Approach",
+    steps: [
+      {
+        number: "01",
+        title: "Financial Profile Analysis",
+        description: "In-depth review of turnover, ITR, GST, banking history, and CIBIL score."
+      },
+      {
+        number: "02",
+        title: "Eligibility Assessment",
+        description: "Identify suitable loan products and maximum eligible funding amount."
+      },
+      {
+        number: "03",
+        title: "Documentation Structuring",
+        description: "Preparation of CMA, project report, and financial documentation for strong presentation."
+      },
+      {
+        number: "04",
+        title: "Bank/NBFC Coordination",
+        description: "Selection of appropriate lender and complete support until sanction and disbursement."
+      }
+    ]
+  },
+  faqs: [
+    {
+      question: "Who can apply for business loans through your consultancy?",
+      answer: "We assist proprietorship firms, partnership firms, LLPs, private limited companies, OPCs, trusts, professionals, traders, manufacturers, service providers, startups, and MSMEs."
+    },
+    {
+      question: "Do you provide collateral-free loans?",
+      answer: "Yes, we assist in unsecured business loans based on turnover, ITR, GST returns, banking profile, and CIBIL score."
+    },
+    {
+      question: "Do you help in case of loan rejection?",
+      answer: "Yes, we specialize in restructuring and strengthening rejected or complex loan cases."
+    },
+    {
+      question: "Do you provide PAN India loan services?",
+      answer: "Yes, we provide loan consultancy services across India through both physical and online processes."
+    }
+  ],
+  cta: {
+    title: "Need Business Funding Support?",
+    description: "Get expert guidance to secure the right loan with structured documentation and higher approval chances.",
+    primaryButton: "Book Financial Consultation",
+    secondaryButton: "Check Loan Eligibility"
   }
-  ,
+},
+  
     smeIpo: {
     title: "SME IPO Advisory",
     description: "End-to-end SME IPO consulting and listing support.",

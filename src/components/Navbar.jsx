@@ -56,13 +56,15 @@ const Navbar = () => {
       ],
     },
     {
-      to: "#services",
+      to: "#",
       label: "Services",
       dropdown: [
         { to: "/services/accounting", label: "Accounting Services" },
         { to: "/services/audit", label: "Audit Services" },
         { to: "/services/consulting", label: "Consulting" },
         { to: "/services/payroll", label: "Payroll Management" },
+                { to:"/services/financeLoanConsultancyService", label:"Finance & Loan Consultancy Services"},
+
         {
           to: "#",
           label: "Corporate Consultancy",

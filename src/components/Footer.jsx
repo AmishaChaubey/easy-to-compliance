@@ -680,8 +680,8 @@ const Footer = () => {
                   <MapPin />
                 </div>
                 <div className="contact-text">
-                  Galaxy Diamond Plaza,<br />
-                  Noida, Uttar Pradesh
+                  D-507 TOWER D URBTECH TRADE CENTER,<br />
+                 SECTOR 132 NOIDA 201301
                 </div>
               </div>
 
@@ -689,8 +689,8 @@ const Footer = () => {
                 <div className="contact-icon">
                   <Phone />
                 </div>
-                <a href="tel:+919999999999" className="contact-link contact-text">
-                  +91 9999999999
+                <a href="tel:+91-9968285325" className="contact-link contact-text">
+                  +91-9968285325
                 </a>
               </div>
 
@@ -698,8 +698,8 @@ const Footer = () => {
                 <div className="contact-icon">
                   <Mail />
                 </div>
-                <a href="mailto:info@easytocompliance.com" className="contact-link contact-text">
-                  info@easytocompliance.com
+                <a href="mailto:advrajneshjha@gmail.com" className="contact-link contact-text">
+                  advrajneshjha@gmail.com
                 </a>
               </div>
 

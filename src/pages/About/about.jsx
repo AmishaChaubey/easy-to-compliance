@@ -198,62 +198,51 @@ export default function AboutPage() {
         .founder-wrap {
           display: flex;
           flex-direction: column;
-          gap: 0;
           align-items: center;
-        }
-        @media (min-width: 768px) {
-          .founder-wrap {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            align-items: center;
-            gap: 0;
-          }
+          gap: 0;
         }
 
-        .founder-avatar-col {
-          position: relative;
-          z-index: 10;
+        /* Founder image */
+        .founder-image-wrap {
           display: flex;
           justify-content: center;
-          margin-bottom: -2rem;   /* overlap on mobile */
-        }
-        @media (min-width: 768px) {
-          .founder-avatar-col {
-            margin-bottom: 0;
-            margin-right: -4rem;  /* overlap on desktop */
-          }
+          margin-bottom: -2.5rem;
+          position: relative;
+          z-index: 10;
         }
 
-        .founder-avatar {
+        .founder-image {
           width: 10rem;
           height: 10rem;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 5px solid white;
+          box-shadow: 0 8px 32px rgba(19, 81, 146, 0.25);
+          background: linear-gradient(135deg, #135192, #2E86DE);
         }
         @media (min-width: 480px) {
-          .founder-avatar { width: 12rem; height: 12rem; }
+          .founder-image { width: 12rem; height: 12rem; }
         }
         @media (min-width: 768px) {
-          .founder-avatar { width: 14rem; height: 14rem; }
+          .founder-image { width: 14rem; height: 14rem; }
         }
         @media (min-width: 1024px) {
-          .founder-avatar { width: 16rem; height: 16rem; }
-        }
-
-        .founder-avatar-text {
-          font-size: clamp(2.5rem, 8vw, 4.5rem);
+          .founder-image { width: 16rem; height: 16rem; }
         }
 
         .founder-card {
           width: 100%;
-          padding: 3.5rem 1.5rem 1.75rem;   /* extra top to clear avatar overlap */
+          padding: 5rem 1.5rem 1.75rem;
+          text-align: center;
         }
         @media (min-width: 480px) {
-          .founder-card { padding: 3.5rem 2rem 2rem; }
+          .founder-card { padding: 5rem 2rem 2rem; }
         }
         @media (min-width: 768px) {
-          .founder-card { padding: 2.5rem 2.5rem 2.5rem 5rem; }
+          .founder-card { padding: 5rem 2.5rem 2.5rem; }
         }
         @media (min-width: 1024px) {
-          .founder-card { padding: 2.5rem 3rem 2.5rem 6rem; }
+          .founder-card { padding: 5.5rem 3rem 2.5rem; }
         }
 
         .founder-name {
@@ -283,6 +272,39 @@ export default function AboutPage() {
           display: flex;
           flex-wrap: wrap;
           gap: 0.5rem;
+          justify-content: center;
+        }
+
+        /* Service list styling */
+        .service-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .service-list li {
+          padding: 0.25rem 0;
+          color: #4B5563;
+          font-size: 0.875rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.5rem;
+          text-align: left;
+        }
+        .service-list li::before {
+          content: '✔';
+          color: #135192;
+          font-weight: bold;
+          flex-shrink: 0;
+        }
+
+        .services-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+          margin-top: 1.25rem;
+        }
+        @media (min-width: 768px) {
+          .services-grid { grid-template-columns: 1fr 1fr; }
         }
       `}</style>
 
@@ -307,8 +329,6 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-
-     
       </div>
 
       {/* ── Main Content ── */}
@@ -329,16 +349,10 @@ export default function AboutPage() {
           <div className="who-grid animate-fade-in-up opacity-0 delay-200">
             <div className="space-y-5">
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                Founded in 2005, TaxPro Solutions began as a boutique tax consultancy serving local
-                small businesses and individual filers. Over two decades, we have grown into a
-                full-service taxation firm trusted by thousands of clients across the country, from
-                salaried professionals to large corporate enterprises.
+                Founded by Adv. Rajnesh Jha, Easy To Compliance is a nationally recognized GST and Income Tax litigation practice providing end-to-end representation and advisory services across India.
               </p>
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                We specialize in income tax filing, GST & indirect tax compliance, corporate tax
-                planning, international taxation, and tax dispute resolution. Our approach combines
-                deep regulatory knowledge with proactive planning strategies to minimize liabilities,
-                ensure full compliance, and protect our clients from penalties.
+                We specialize in Income Tax Scrutiny & Assessments, GST Notice Replies (ASMT-10, DRC-01, DRC-07, SCN), corporate tax, Faceless Assessment Representation, Appeals before CIT(A), High-value GST & Income Tax Litigation and Strategic Tax Compliance Structuring. We deliver legally strong, technically accurate, and result-driven solutions for businesses, professionals, startups, MSMEs, and corporates. Through our fully digital working model, clients from anywhere in India can access seamless, secure, and professionally managed tax representation without physical visits.
               </p>
             </div>
 
@@ -347,10 +361,10 @@ export default function AboutPage() {
               <div className="relative bg-white rounded-3xl p-6 md:p-8 shadow-xl">
                 <div className="stats-grid">
                   {[
-                    { value: '12,000+', label: 'Returns Filed'         },
-                    { value: '20+',     label: 'Years of Expertise'    },
-                    { value: '80+',     label: 'Tax Professionals'     },
-                    { value: '99%',     label: 'Compliance Accuracy'   },
+                    { value: '1000+', label: 'Returns Filed'         },
+                    { value: '20+',   label: 'Years of Expertise'    },
+                    { value: '80+',   label: 'Tax Professionals'     },
+                    { value: '99%',   label: 'Compliance Accuracy'   },
                   ].map(({ value, label }) => (
                     <div key={label} className="text-center py-2">
                       <div className="stat-number font-bold text-[#135192] text-display mb-1">{value}</div>
@@ -444,14 +458,14 @@ export default function AboutPage() {
 
           <div className="values-grid">
             {[
-              { title: 'Integrity',             icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />, body: 'We uphold the highest ethical standards in every filing, advisory, and audit representation we undertake.' },
-              { title: 'Accuracy',              icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />, body: 'Zero-error compliance is our benchmark. Every return we prepare undergoes rigorous multi-level review.' },
-              { title: 'Collaboration',         icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />, body: 'We work hand-in-hand with clients, accountants, and legal teams to ensure a seamless tax experience.' },
-              { title: 'Confidentiality',       icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />, body: 'Client financial data is safeguarded with bank-grade security protocols and strict data privacy practices.' },
-              { title: 'Client First',          icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />, body: "Every tax strategy we craft is tailored to the client's unique financial situation and long-term goals." },
-              { title: 'Continuous Learning',   icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />, body: 'Our team stays current with every amendment to the Income Tax Act, GST rules, and international tax treaties.' },
-              { title: 'Accountability',        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />, body: 'We take full ownership of every engagement and stand by our advice, even through audits and disputes.' },
-              { title: 'Transparency',          icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />, body: 'No hidden fees, no jargon. We explain every tax position clearly so clients always understand their obligations.' },
+              { title: 'Integrity',           icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />, body: 'We uphold the highest ethical standards in every filing, advisory, and audit representation we undertake.' },
+              { title: 'Accuracy',            icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />, body: 'Zero-error compliance is our benchmark. Every return we prepare undergoes rigorous multi-level review.' },
+              { title: 'Collaboration',       icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />, body: 'We work hand-in-hand with clients, accountants, and legal teams to ensure a seamless tax experience.' },
+              { title: 'Confidentiality',     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />, body: 'Client financial data is safeguarded with bank-grade security protocols and strict data privacy practices.' },
+              { title: 'Client First',        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />, body: "Every tax strategy we craft is tailored to the client's unique financial situation and long-term goals." },
+              { title: 'Continuous Learning', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />, body: 'Our team stays current with every amendment to the Income Tax Act, GST rules, and international tax treaties.' },
+              { title: 'Accountability',      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />, body: 'We take full ownership of every engagement and stand by our advice, even through audits and disputes.' },
+              { title: 'Transparency',        icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />, body: 'No hidden fees, no jargon. We explain every tax position clearly so clients always understand their obligations.' },
             ].map(({ title, icon, body }) => (
               <div key={title} className="value-card bg-white rounded-xl p-5 md:p-6 shadow-md">
                 <div className="w-12 h-12 md:w-14 md:h-14 bg-[#135192]/10 rounded-xl flex items-center justify-center mb-4">
@@ -478,30 +492,73 @@ export default function AboutPage() {
 
           <div className="relative max-w-7xl mx-auto">
             <div className="founder-wrap">
-              {/* Avatar */}
-              <div className="founder-avatar-col">
-                <div className="relative inline-block">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-[#135192]/20 to-[#2E86DE]/20 rounded-full blur-2xl"></div>
-                  <div className="relative founder-avatar bg-gradient-to-br from-[#135192] to-[#2E86DE] rounded-full flex items-center justify-center shadow-2xl">
-                    <span className="text-white founder-avatar-text font-bold text-display">RM</span>
-                  </div>
-                </div>
+
+              {/* ── Founder Photo (above card) ── */}
+              <div className="founder-image-wrap">
+                <img
+                  src="/foundder.png"
+                  alt="Adv. Rajnesh Jha – Founder, Easy To Compliance"
+                  className="founder-image"
+                  onError={(e) => {
+                    /* Fallback: show initials avatar if image fails to load */
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextSibling.style.display = 'flex';
+                  }}
+                />
+              
               </div>
 
               {/* Card */}
               <div className="bg-white rounded-3xl founder-card shadow-xl border border-gray-100 w-full">
-                <h3 className="text-display founder-name font-bold text-gray-900 mb-1">Rajesh Mehta</h3>
-                <p className="text-[#135192] font-semibold founder-title mb-4">Managing Partner & Founder</p>
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-5">
-                  A Chartered Accountant with over 25 years of experience in direct and indirect taxation,
-                  Rajesh founded TaxPro Solutions with a mission to make expert tax advisory accessible
-                  to every business, regardless of scale. He holds a fellowship from the Institute of
-                  Chartered Accountants and has represented clients in hundreds of successful tax tribunal
-                  and appellate proceedings. He is a regular speaker at national taxation conferences and
-                  a contributor to leading finance publications.
+                <h3 className="text-display founder-name font-bold text-gray-900 mb-1">Adv. Rajnesh Jha</h3>
+                <p className="text-[#135192] font-semibold founder-title mb-1">Founder – Easy To Compliance</p>
+                <p className="text-gray-500 text-sm font-medium mb-4">Leading GST & Income Tax Litigation Expert in India</p>
+
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4">
+                  Adv. Rajnesh Jha is a nationally recognized GST consultant, Income Tax litigation specialist, and tax compliance strategist, providing end-to-end representation and advisory services to clients across India. With deep expertise in handling GST notices, Income Tax scrutiny, faceless assessments, tax appeals, and complex litigation matters, he delivers legally strong, technically accurate, and result-driven solutions for businesses, professionals, startups, and corporates.
                 </p>
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-5">
+                  Through a fully digital and process-driven system, clients from anywhere in India can access seamless, secure, and time-bound professional services.
+                </p>
+
+                {/* Core Services */}
+                <div className="services-grid mb-5">
+                  <div className="bg-[#135192]/5 rounded-xl p-4">
+                    <h4 className="text-[#135192] font-bold text-sm md:text-base mb-3">GST Consultancy & Litigation</h4>
+                    <ul className="service-list">
+                      <li>GST registration (Regular | Composition | Amendment | Cancellation)</li>
+                      <li>GST return filing & compliance management</li>
+                      <li>GST notice reply – ASMT-10, DRC-01, DRC-07, SCN</li>
+                      <li>GST assessment & adjudication handling</li>
+                      <li>GST appeal filing & representation</li>
+                      <li>GST refund & reconciliation cases</li>
+                      <li>GST advisory for startups & growing businesses</li>
+                    </ul>
+                  </div>
+                  <div className="bg-[#135192]/5 rounded-xl p-4">
+                    <h4 className="text-[#135192] font-bold text-sm md:text-base mb-3">Income Tax Consultancy & Litigation</h4>
+                    <ul className="service-list">
+                      <li>Income Tax return filing for individuals & businesses</li>
+                      <li>Income Tax scrutiny & assessment cases</li>
+                      <li>Faceless assessment reply & representation</li>
+                      <li>Income Tax notice handling (all sections)</li>
+                      <li>Appeal before CIT(A)</li>
+                      <li>Tax planning & compliance structuring</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Contact */}
+                <div className="bg-gradient-to-r from-[#135192]/10 to-[#2E86DE]/10 rounded-xl p-4 mb-5">
+                  <h4 className="text-[#135192] font-bold text-sm md:text-base mb-2">Book Your Consultation – Anywhere in India</h4>
+                  <div className="flex flex-col gap-1 text-sm text-gray-700">
+                    <span>📞 +91-9968285325</span>
+                    <span>📧 advrajneshjha@gmail.com</span>
+                  </div>
+                </div>
+
                 <div className="tag-list">
-                  {['Chartered Accountant', 'Tax Litigation', 'Corporate Tax'].map((tag) => (
+                  {['GST Litigation', 'Income Tax', 'Faceless Assessment', 'Tax Appeals', 'Notices & Compliance'].map((tag) => (
                     <span key={tag} className="px-3 py-1.5 bg-[#135192]/10 text-[#135192] rounded-full text-xs md:text-sm font-medium">
                       {tag}
                     </span>
@@ -529,10 +586,10 @@ export default function AboutPage() {
 
           <div className="why-grid">
             {[
-              { title: 'Certified Tax Experts',  body: 'Our team of CAs, CPAs, and tax lawyers brings decades of specialised experience across all tax domains.', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /> },
-              { title: 'Year-Round Support',      body: 'Tax questions don\'t wait for filing season. Our advisors are available year-round for guidance and peace of mind.', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /> },
-              { title: 'Tailored Tax Strategies', body: 'Every client receives a customised tax plan aligned with their income structure, industry, and financial objectives.', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /> },
-              { title: 'Proven Compliance Record', body: 'Thousands of error-free filings and a 99% first-time compliance rate demonstrate our commitment to accuracy.', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /> },
+              { title: 'Certified Tax Experts',   body: 'Our team of CAs, CPAs, and tax lawyers brings decades of specialised experience across all tax domains.', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /> },
+              { title: 'Year-Round Support',       body: "Tax questions don't wait for filing season. Our advisors are available year-round for guidance and peace of mind.", icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /> },
+              { title: 'Tailored Tax Strategies',  body: 'Every client receives a customised tax plan aligned with their income structure, industry, and financial objectives.', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /> },
+              { title: 'Proven Compliance Record',  body: 'Thousands of error-free filings and a 99% first-time compliance rate demonstrate our commitment to accuracy.', icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /> },
             ].map(({ title, body, icon }) => (
               <div key={title} className="card-hover bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100">
                 <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-[#135192] to-[#2E86DE] rounded-2xl flex items-center justify-center mb-5">
